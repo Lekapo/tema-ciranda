@@ -24,13 +24,13 @@ if ( is_front_page() ) {
 					<div id="carousel" class="carousel slide carousel-sync" data-ride="carousel" data-pause="false">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/plain.jpg" alt="First slide" class="d-block w100">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/plain.jpg" alt="First slide" class="d-block w100">
 							</div>
 							<div class="carousel-item">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/mountain.png" alt="Second slide" class="d-block w100">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/mountain.png" alt="Second slide" class="d-block w100">
 							</div>
 							<div class="carousel-item">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/beach.jpg" alt="Third slide" class="d-block w100">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/beach.jpg" alt="Third slide" class="d-block w100">
 							</div>
 						</div>
 					</div>

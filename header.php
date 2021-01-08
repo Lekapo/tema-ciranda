@@ -39,11 +39,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<a href="/">
 						<div class="logo">
 							<div class="logo-circle">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/outside-logo.png" alt="" class="logo-circle-outside">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/inside-logo.png" alt="" class="logo-circle-inside">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/outside-logo.png" alt="" class="logo-circle-outside">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/inside-logo.png" alt="" class="logo-circle-inside">
 							</div>
-							<img src="<?php echo get_template_directory_uri(); ?>/img/ciranda.png" alt="" class="logo-ciranda">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/20-anos.png" alt="" class="logo-vinte-anos">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/ciranda.png" alt="" class="logo-ciranda">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/20-anos.png" alt="" class="logo-vinte-anos">
 						</div>
 					</a>
 				</div>
