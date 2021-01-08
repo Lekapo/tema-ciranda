@@ -18,37 +18,49 @@ if ( is_front_page() ) {
 }
 ?>
 	<div class="container">
-		<div class="row">
+		<div class="row" id="banner-row">
 			<div id="banner">
-				<div class="col-12 col-sm-8 offset-sm-2 col-md-12 offset-md-0">
+				<div class="col-12 col-sm-10 offset-sm-1 col-md-12 offset-md-0">
 					<div id="carousel" class="carousel slide carousel-sync" data-ride="carousel" data-pause="false">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/plain.jpg" alt="First slide" class="d-block w100">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/plain.jpg" alt="First slide" class="w100">
 							</div>
 							<div class="carousel-item">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/mountain.png" alt="Second slide" class="d-block w100">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/mountain.png" alt="Second slide" class="w100">
 							</div>
 							<div class="carousel-item">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/beach.jpg" alt="Third slide" class="d-block w100">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/beach.jpg" alt="Third slide" class="w100">
 							</div>
 						</div>
 					</div>
 					<div id="title-carousel" class="carousel slide carousel-sync" data-ride="carousel" data-pause="false">
 						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="carousel-title">
-									<h2 class="carousel-title-1">Species de dexter era, tractare gabalium!</h2>
+							<div class="carousel-item active category-1">
+								<div class="title-carousel-holder">
+									<h3><strong>//categoria 1</strong></h3>
+									<div class="title-carousel-title-holder">
+										<h2>Morte, vida, arte, corpo</h2>
+									</div>
+									<div class="line category-1-decoration"></div>
 								</div>
 							</div>
-							<div class="carousel-item">
-								<div class="carousel-title">
-									<h2 class="carousel-title-2">Species de dexter era, tractare gabalium!</h2>
+							<div class="carousel-item category-2">
+								<div class="title-carousel-holder">
+									<h3><strong>//categoria 2</strong></h3>
+									<div class="title-carousel-title-holder">
+										<h2>Empregos para a retomada do crescimento em 2021</h2>
+									</div>
+									<div class="line category-2-decoration"></div>
 								</div>
 							</div>
-							<div class="carousel-item">
-								<div class="carousel-title">
-									<h2 class="carousel-title-3">Bubos sunt byssuss de peritus silva!</h2>
+							<div class="carousel-item category-3">
+								<div class="title-carousel-holder">
+									<h3><strong>//categoria 3</strong></h3>
+									<div class="title-carousel-title-holder">
+										<h2>Empregos para a retomada do crescimento em 2021</h2>
+									</div>
+									<div class="line category-3-decoration"></div>
 								</div>
 							</div>
 						</div>

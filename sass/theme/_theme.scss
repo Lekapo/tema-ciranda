@@ -14,6 +14,24 @@ $category-color-6: #1a1a1a;
 
 html {
   font-size: 10px;
+  .category-1-decoration {
+	border-bottom: 5px solid $category-color-1;
+  }
+  .category-2-decoration {
+	border-bottom: 5px solid $category-color-2;
+  }
+  .category-3-decoration {
+	border-bottom: 5px solid $category-color-3;
+  }
+  .category-1 {
+	color: $category-color-1
+  }
+  .category-2 {
+	color: $category-color-2
+  }
+  .category-3 {
+	color: $category-color-3
+  }
 }
 
 .top-header {
@@ -215,73 +233,110 @@ html {
 	}
   }
 }
-#banner {
-  height: 40rem;
-  #carousel {
-	@media only screen and (min-width: 720px) {
-	  height: 40rem;
-	}
+#banner-row {
+  @media only screen and (min-width: 720px) {
+	width: 70rem;
+  }
+  #banner {
 	height: 40rem;
-	overflow: hidden;
-	.carousel-inner {
+	width: 100%; // so bottom line on mobile will cover full width
+	#carousel {
+	  @media only screen and (min-width: 540px) {
+		display: block;
+	  }
+	  @media only screen and (min-width: 720px) {
 
+	  }
+	  display: none;
+	  height: 40rem;
 	  overflow: hidden;
-	  .carousel-item {
-		img {
-		  @media only screen and (min-width: 540px) {
-			display: block;
+
+	  .carousel-inner {
+		.carousel-item {
+		  img {
+			@media only screen and (min-width: 540px) {
+			}
+			@media only screen and (min-width: 720px) {
+			  height: 40rem;
+			}
+			position: relative;
+			height: 20rem;
+			width: 70rem;
 		  }
-		  @media only screen and (min-width: 720px) {
-			height: 40rem;
-		  }
-		  display: none;
-		  position: relative;
-		  height: 20rem;
-		  width: 70rem;
 		}
 	  }
 	}
-  }
-  #title-carousel {
-	@media only screen and (min-width: 720px) {
-	  top: -30rem;
-	  height: 30rem;
-	  width: 30rem;
-	}
-	height: 20rem;
-	width: 100%;
-	background: $primary;
 
-	box-shadow: 4px -4px 10px #484848a3;
+	#title-carousel {
+	  @media only screen and (min-width: 540px) {
+		top: -20rem;
+		box-shadow: 4px -4px 10px #484848a3;
 
-	top: -20rem;
+	  }
+	  @media only screen and (min-width: 720px) {
+		top: -30rem;
+		height: 30rem;
+		width: 30rem;
+	  }
+	  height: 20rem;
+	  width: 100%;
+	  background: $primary;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
+	  top: 0rem;
 
-	.carousel-inner {
-	  .carousel-item {
-		.carousel-title {
-		  h2 {
-			font-family: 'Patua One', cursive;
-			font-size: 3.5rem;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  padding: 10px;
+
+	  .carousel-inner {
+
+		.carousel-item {
+
+		  margin-top: 2rem;
+
+		  @media only screen and (min-width: 720px) {
+
 		  }
-		  .carousel-title-1 {
-			border-bottom: 5px solid $category-color-1;
-		  }
+		  .title-carousel-holder {
+			.title-carousel-title-holder {
+			  @media only screen and (min-width: 720px) {
+				height: 20rem; // so the size of the title stay the same in the carousel.
+			  }
+			  height: 10rem; // so the size of the title stay the same in the carousel.
+			  h2 {
+				color: $secondary;
+				font-size: 2.5rem;
+				font-family: 'Roboto', sans-serif;
+				padding: 10px;
+				margin: 10px 0px;
+				@media only screen and (min-width: 720px) {
+				  font-size: 3rem;
+				}
 
-		  .carousel-title-2 {
-			border-bottom: 5px solid $category-color-2;
-		  }
+			}
 
-		  .carousel-title-3 {
-			border-bottom: 5px solid $category-color-3;
+			}
+			h3 {
+			  font-family: 'Patua One', cursive;
+			  font-size: 2rem;
+
+			  @media only screen and (min-width: 540px) {
+				font-size: 2.2rem;
+
+			  }
+
+			  @media only screen and (min-width: 720px) {
+
+			  }
+			}
+			.line {
+			  width: 100%;
+
+			}
 		  }
 		}
 	  }
 	}
   }
 }
-
