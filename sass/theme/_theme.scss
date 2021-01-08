@@ -1,0 +1,285 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+$primary: #fff;
+$primary-500: #ddd;
+$primary-700: #aaa;
+$secondary: #1a1a1a;
+$secondary-500: #000;
+$category-color-1: #d42824;
+$category-color-2: #0c598d;
+$category-color-3: #f69541;
+$category-color-4: #fccf38;
+$category-color-5: #ae93c6;
+$category-color-6: #1a1a1a;
+
+html {
+  font-size: 10px;
+}
+
+.top-header {
+  @media only screen and (min-width: 540px) {
+	height: 15rem;
+	background: $primary;
+  }
+  background: $secondary;
+  height: 6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  color: $primary;
+  font-size: 2.5rem;
+
+  .logo {
+	font-size: 6px;
+	height: 10em;
+
+	text-align: center;
+
+
+	&:hover {
+	  .logo-vinte-anos {
+		transform: scale(1.25);
+		transition: transform 0.5s ease;
+
+	  }
+	}
+
+	.logo-circle {
+	  @media only screen and (min-width: 540px) {
+		margin: 0;
+		transform: scale(1.15);
+	  }
+
+	  height: 10em;
+	  width: 10em;
+
+	  margin: auto;
+	  z-index: 500;
+	  transform: scale(0.7);
+
+	  animation: logo-circle-animation 1s linear;
+
+	  @keyframes logo-circle-animation {
+		0% {
+		  opacity: 0;
+		}
+		100% {
+		  opacity: 1;
+		}
+
+	  }
+
+	  .logo-circle-outside {
+		height: 10em;
+
+		animation: logo-circle-outside-animation 45s linear infinite;
+
+		@keyframes logo-circle-outside-animation {
+		  100% {
+			transform: rotate(360deg);
+		  }
+
+		}
+	  }
+
+	  .logo-circle-inside {
+		position: relative;
+		top: -8.25em;
+
+		height: 6.5em;
+	  }
+	}
+
+	.logo-ciranda {
+	  @media only screen and (min-width: 540px) {
+		display: block;
+	  }
+	  display: none;
+	  height: 5.0em;
+
+	  margin-left: 1.5rem;
+
+	  position: absolute;
+	  top: 2.5em;
+	  left: 11.5em;
+
+	  animation: logo-ciranda-animation 1s ease;
+
+	  @keyframes logo-ciranda-animation {
+		0% {
+		  opacity: 0;
+		;
+		}
+
+		85% {
+		  opacity: 1;
+		}
+	  }
+	}
+
+	.logo-vinte-anos {
+	  @media only screen and (min-width: 540px) {
+		display: block;
+	  }
+	  display: none;
+	  height: 12em;
+
+	  position: absolute;
+	  top: -0.5em;
+	  left: 30em;
+
+	  margin-left: 1.5rem;
+
+	  transition: all .3s ease-in-out;
+	  animation: logo-vinte-anos 2.4s ease-in-out;
+
+	  @keyframes logo-vinte-anos {
+		0% {
+		  opacity: 0;
+		  transform: scale(0);
+		}
+		30% {
+
+		  opacity: 0;
+		}
+
+		40% {
+		  transform: scale(0);
+		}
+
+		60% {
+		  transform: scale(1.5);
+		  opacity: 1;
+		}
+
+		80% {
+		  transform: scale(1);
+		  opacity: 1;
+		}
+	  }
+	}
+  }
+}
+
+#main-nav {
+  background: $primary;
+  margin-bottom: 2rem;
+
+  #main-menu {
+	li {
+	  a {
+		text-decoration: none;
+		font-family: 'Patua One', cursive;
+	  	font-size: 1.8rem;
+		color: $primary-700;
+
+		padding-right: 30px;
+
+		transition: all .15s ease-out;
+
+		&:hover {
+		  transform: scale(1.2);
+		  transition: transform .15s ease-in;
+		  filter: saturate(400%);
+		}
+	  }
+	}
+
+	#menu-item-8 a {
+	  color: $category-color-1;
+	}
+	#menu-item-9 a {
+	  color: $category-color-2;
+
+	}
+	#menu-item-10 a {
+	  color: $category-color-3;
+
+	}
+	#menu-item-11 a {
+	  color: $category-color-4;
+
+	}
+	#menu-item-12 a {
+	  color: $category-color-5;
+
+	}
+	#menu-item-13 a {
+	  color: $category-color-6;
+
+	}
+  }
+}
+#banner {
+  height: 40rem;
+  #carousel {
+	@media only screen and (min-width: 720px) {
+	  height: 40rem;
+	}
+	height: 40rem;
+	overflow: hidden;
+	.carousel-inner {
+
+	  overflow: hidden;
+	  .carousel-item {
+		img {
+		  @media only screen and (min-width: 540px) {
+			display: block;
+		  }
+		  @media only screen and (min-width: 720px) {
+			height: 40rem;
+		  }
+		  display: none;
+		  position: relative;
+		  height: 20rem;
+		  width: 70rem;
+		}
+	  }
+	}
+  }
+  #title-carousel {
+	@media only screen and (min-width: 720px) {
+	  top: -30rem;
+	  height: 30rem;
+	  width: 30rem;
+	}
+	height: 20rem;
+	width: 100%;
+	background: $primary;
+
+	box-shadow: 4px -4px 10px #484848a3;
+
+	top: -20rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+
+	.carousel-inner {
+	  .carousel-item {
+		.carousel-title {
+		  h2 {
+			font-family: 'Patua One', cursive;
+			font-size: 3.5rem;
+		  }
+		  .carousel-title-1 {
+			border-bottom: 5px solid $category-color-1;
+		  }
+
+		  .carousel-title-2 {
+			border-bottom: 5px solid $category-color-2;
+		  }
+
+		  .carousel-title-3 {
+			border-bottom: 5px solid $category-color-3;
+		  }
+		}
+	  }
+	}
+  }
+}
+
