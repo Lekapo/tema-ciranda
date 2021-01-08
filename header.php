@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="top-header">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-4">
+				<div class="col-4 order-sm-7">
 						<i class="fa fa-search"></i>
 				</div>
 				<div class="col-4 col-sm-6 offset-sm-2 col-md-6 offset-md-0">
@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</a>
 				</div>
-				<div class="col-4 justify-right">
+				<div class="col-4 justify-right d-sm-none">
 					<i class="fa fa-bars float-right"></i>
 				</div>
 			</div>
