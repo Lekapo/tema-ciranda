@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav id="main-nav" class="navbar navbar-expand-lg" aria-labelledby="main-nav-label">
 
 
-			<div class="container">
+			<divgit class="container">
 				<!-- The WordPress Menu goes here -->
 				<?php
 				wp_nav_menu(
@@ -81,7 +81,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
-			</div>
+			</divgit add >
 
 		</nav><!-- .site-navigation -->
 
