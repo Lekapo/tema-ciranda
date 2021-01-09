@@ -35,7 +35,7 @@ html {
 }
 
 .top-header {
-  @media only screen and (min-width: 540px) {
+  @media only screen and (min-width: 576px) {
 	height: 15rem;
 	background: $primary;
   }
@@ -51,6 +51,12 @@ html {
   font-size: 2.5rem;
 
 
+  .search-column {
+	@media only screen and (min-width: 576px) {
+	  display: none;
+	}
+	display: block;
+  }
 
   .logo {
 	font-size: 6px;
@@ -68,7 +74,7 @@ html {
 	}
 
 	.logo-circle {
-	  @media only screen and (min-width: 540px) {
+	  @media only screen and (min-width: 576px) {
 		margin: 0;
 		transform: scale(1.15);
 	  }
@@ -114,7 +120,7 @@ html {
 	}
 
 	.logo-ciranda {
-	  @media only screen and (min-width: 540px) {
+	  @media only screen and (min-width: 576px) {
 		display: block;
 	  }
 	  display: none;
@@ -141,7 +147,7 @@ html {
 	}
 
 	.logo-vinte-anos {
-	  @media only screen and (min-width: 540px) {
+	  @media only screen and (min-width: 576px) {
 		display: block;
 	  }
 	  display: none;
@@ -182,11 +188,32 @@ html {
 	  }
 	}
   }
+
+  .mobile-menu-dropdown {
+	button {
+	  @media only screen and (min-width: 768px) {
+		margin-right: 12px;
+	  }
+	  @media only screen and (min-width: 576px) {
+		color: $secondary;
+	  }
+	  color: $primary;
+	  font-size: 2.5rem;
+	  float: right;
+	}
+  }
+
+
+
 }
 
 #main-nav {
   background: $primary;
   margin-bottom: 2rem;
+
+  .navbar .navbar-collapse {
+	text-align: center;
+  }
 
   #main-menu {
 	li {
@@ -234,17 +261,17 @@ html {
   }
 }
 #banner-row {
-  @media only screen and (min-width: 720px) {
+  @media only screen and (min-width: 768px) {
 	width: 70rem;
   }
   #banner {
 	height: 40rem;
 	width: 100%; // so bottom line on mobile will cover full width
 	#carousel {
-	  @media only screen and (min-width: 540px) {
+	  @media only screen and (min-width: 576px) {
 		display: block;
 	  }
-	  @media only screen and (min-width: 720px) {
+	  @media only screen and (min-width: 768px) {
 
 	  }
 	  display: none;
@@ -254,9 +281,9 @@ html {
 	  .carousel-inner {
 		.carousel-item {
 		  img {
-			@media only screen and (min-width: 540px) {
+			@media only screen and (min-width: 576px) {
 			}
-			@media only screen and (min-width: 720px) {
+			@media only screen and (min-width: 768px) {
 			  height: 40rem;
 			}
 			position: relative;
@@ -268,15 +295,17 @@ html {
 	}
 
 	#title-carousel {
-	  @media only screen and (min-width: 540px) {
+	  @media only screen and (min-width: 576px) {
 		top: -20rem;
-		box-shadow: 4px -4px 10px #484848a3;
 
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	  }
-	  @media only screen and (min-width: 720px) {
+	  @media only screen and (min-width: 768px) {
 		top: -30rem;
 		height: 30rem;
 		width: 30rem;
+
+		box-shadow: 4px -4px 10px #484848a3;
 	  }
 	  height: 20rem;
 	  width: 100%;
@@ -295,7 +324,7 @@ html {
 
 		  margin-top: 2rem;
 
-		  @media only screen and (min-width: 720px) {
+		  @media only screen and (min-width: 768px) {
 
 		  }
 		  .title-carousel-holder {
@@ -304,18 +333,18 @@ html {
 			  display: flex;
 			  align-items: center;
 
-			  @media only screen and (min-width: 720px) {
+			  @media only screen and (min-width: 768px) {
 				height: 20rem; // so the size of the title stay the same in the carousel.
 			  }
 			  height: 10rem; // so the size of the title stay the same in the carousel.
 			  h2 {
 				color: $secondary;
-				font-size: 2.5rem;
+				font-size: 2rem;
 				font-family: 'Roboto', sans-serif;
 				padding: 10px;
 				margin: 10px 0px;
-				@media only screen and (min-width: 720px) {
-				  font-size: 3rem;
+				@media only screen and (min-width: 768px) {
+				  font-size: 2.5rem;
 				}
 
 			}
@@ -323,14 +352,14 @@ html {
 			}
 			h3 {
 			  font-family: 'Patua One', cursive;
-			  font-size: 2rem;
+			  font-size: 1.7rem;
 
-			  @media only screen and (min-width: 540px) {
-				font-size: 2.2rem;
+			  @media only screen and (min-width: 768px) {
+				font-size: 2rem;
 
 			  }
 
-			  @media only screen and (min-width: 720px) {
+			  @media only screen and (min-width: 768px) {
 
 			  }
 			}

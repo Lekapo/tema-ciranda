@@ -34,10 +34,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="top-header">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-4 order-sm-7">
+				<div class="col-4 order-sm-7 search-column">
 						<i class="fa fa-search"></i>
 				</div>
-				<div class="col-4 col-sm-6 offset-sm-2 col-md-6 offset-md-0">
+				<div class="col-4 col-sm-6 offset-sm-1 col-md-6 offset-md-0">
 					<a href="/">
 						<div class="logo">
 							<div class="logo-circle">
@@ -49,8 +49,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</a>
 				</div>
-				<div class="col-4 justify-right d-sm-none">
-					<i class="fa fa-bars float-right"></i>
+				<div class="col-4 col-md-6 justify-right d-lg-none">
+					<div class="mobile-menu-dropdown">
+						<button
+								class="navbar-toggler"
+								type="button"
+								data-toggle="collapse"
+								data-target="#navbarNavDropdown"
+								aria-controls="navbarNavDropdown"
+								aria-expanded="false"
+								aria-label="<?php esc_attr_e(
+										'Toggle navigation',
+										'understrap'); ?>"
+
+						>
+							<i class="fa fa-bars float-right"></i>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -65,7 +80,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav id="main-nav" class="navbar navbar-expand-lg" aria-labelledby="main-nav-label">
 
 
-			<divgit class="container">
+			<div class="container">
 				<!-- The WordPress Menu goes here -->
 				<?php
 				wp_nav_menu(
@@ -81,7 +96,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
-			</divgit add >
+			</div>
 
 		</nav><!-- .site-navigation -->
 
