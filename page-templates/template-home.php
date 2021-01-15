@@ -19,41 +19,47 @@ if ( is_front_page() ) {
 ?>
 	<div class="container">
 		<div class="row" >
-				<div class="col-12 col-sm-10 offset-sm-1 col-md-12 offset-md-0">
-					<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-							<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-						</ol>
+			<div class="col-12 col-lg-8">
+
+				<!-- Carousel -->
+				<div id="banner">
+					<div id="carousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
+
+							<!-- First Slide -->
 							<div class="carousel-item active">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" class="d-block w-100" alt="...">
+								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/morte.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption d-none d-md-block">
-									<h5>First slide label</h5>
+									<h2>First slide label</h2>
 									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 								</div>
 							</div>
+
+							<!-- First Slide -->
 							<div class="carousel-item">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" class="d-block w-100" alt="...">
+								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption d-none d-md-block">
-									<h5>Second slide label</h5>
+									<h2>Second slide label</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 								</div>
 							</div>
+
+							<!-- First Slide -->
 							<div class="carousel-item">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" class="d-block w-100" alt="...">
+								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption d-none d-md-block">
-									<h5>Third slide label</h5>
+									<h2>Third slide label</h2>
 									<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 								</div>
 							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+
+						<!-- Carousel Controls -->
+						<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						</a>
-						<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+						<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
 						</a>
@@ -61,6 +67,7 @@ if ( is_front_page() ) {
 				</div>
 			</div>
 		</div>
+		<p>lekapo</p>
 	</div>
 
 
