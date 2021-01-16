@@ -52,13 +52,11 @@ if ( is_front_page() ) {
 								?>"
 							>
 
-
-								<h3>
-									<?php /* Banner Category Color*/
-									$categories = get_the_category();
-									echo $categories[0]->cat_name;
-									?>
-								</h3>
+								<?php if ($categories[0]->cat_ID == 5) : ?>
+									<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" />
+								<?php else: ?>
+									<h3><?php echo $categories[0]->cat_name; ?></h3>
+								<?php endif ?>
 								<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2><?php echo get_the_title(); ?></h2>
