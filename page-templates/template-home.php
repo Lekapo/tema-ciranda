@@ -40,8 +40,25 @@ if ( is_front_page() ) {
 								$the_query->the_post();
 								?>
 							<!-- First Slide -->
-							<div class="carousel-item category-1  <?php if ( $index == 0) { echo 'active'; }?>">
-								<h3>//categoria 1</h3>
+							<div class="carousel-item category-<?php
+
+								/* Banner Category Colro*/
+									$categories = get_the_category();
+									echo $categories[0]->cat_ID;
+									?>
+
+								<?php /* Active class for the carousel */
+									if ( $index == 0) { echo 'active'; }
+								?>"
+							>
+
+
+								<h3>
+									<?php /* Banner Category Color*/
+									$categories = get_the_category();
+									echo $categories[0]->cat_name;
+									?>
+								</h3>
 								<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2><?php echo get_the_title(); ?></h2>

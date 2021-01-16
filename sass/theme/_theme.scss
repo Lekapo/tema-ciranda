@@ -23,13 +23,23 @@ html {
   .category-3-decoration {
 	border-bottom: 5px solid $category-color-3;
   }
-  .category-1 {
+  /* Categoria Brasil */
+  .category-7 {
 	color: $category-color-1
   }
-  .category-2 {
+
+  /* Categoria Internacional */
+  .category-4 {
 	color: $category-color-2
   }
+
+  /* Categoria FSM */
   .category-3 {
+	color: $category-color-3
+  }
+
+  /* Categoria Feminismo */
+  .category-8 {
 	color: $category-color-3
   }
 
@@ -243,18 +253,18 @@ html {
 	  }
 	}
 
-	#menu-item-8 a {
+	#menu-item-52 a {
 	  color: $category-color-1;
 	}
-	#menu-item-9 a {
+	#menu-item-51 a {
 	  color: $category-color-2;
 
 	}
-	#menu-item-10 a {
+	#menu-item-50 a {
 	  color: $category-color-3;
 
 	}
-	#menu-item-11 a {
+	#menu-item-53 a {
 	  color: $category-color-4;
 
 	}
