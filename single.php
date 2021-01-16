@@ -14,33 +14,31 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="single-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
+	<div class="container-fluid" id="content" tabindex="-1">
 		<div class="row">
+				<main class="site-main category-<?php
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+					/* Category Color*/
+					$categories = get_the_category();
+					echo $categories[0]->cat_ID;
+					?>" id="main">
 
-			<main class="site-main" id="main">
+					<?php
+					while ( have_posts() ) :
+						the_post();
+						get_template_part( 'loop-templates/content', 'single' );
 
-				<?php
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'loop-templates/content', 'single' );
-					understrap_post_nav();
+					?>
+					<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-8 offset-xl-2 col-xl-8">
+						<?php
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) {
+								comments_template();
+							}
+							endwhile;
+						?>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				}
-				?>
-
-			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
+				</main><!-- #main -->
 		</div><!-- .row -->
 
 	</div><!-- #content -->
