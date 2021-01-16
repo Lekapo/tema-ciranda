@@ -34,12 +34,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 
 	<div class="top-header">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row align-items-center">
 				<div class="col-4 order-sm-7 search-column">
 						<i class="fa fa-search"></i>
 				</div>
-				<div class="col-4 col-sm-6 offset-sm-1 col-md-6 offset-md-0">
+				<div class="col-4 col-sm-6 offset-sm-1 offset-md-1 col-md-4 offset-lg-1 offset-xl-2">
 					<a href="/">
 						<div class="logo">
 							<div class="logo-circle">
@@ -82,22 +82,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav id="main-nav" class="navbar navbar-expand-lg" aria-labelledby="main-nav-label">
 
 
-			<div class="container">
-				<!-- The WordPress Menu goes here -->
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav mr-auto',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'           => 2,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-				);
-				?>
+			<div class="container-fluid">
+				<div class="offset-lg-1 offset-xl-2">
+					<!-- The WordPress Menu goes here -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'collapse navbar-collapse',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav mr-auto',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'depth'           => 2,
+							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						)
+					);
+					?>
+				</div>
 			</div>
 
 		</nav><!-- .site-navigation -->
