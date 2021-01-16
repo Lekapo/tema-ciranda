@@ -23,7 +23,7 @@ if ( is_front_page() ) {
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-6 offset-xl-2 col-xl-5">
 
 				<!-- Carousel -->
-				<div id="banner" class="box">
+				<div id="banner">
 					<div id="carousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
 						<?php
@@ -53,12 +53,13 @@ if ( is_front_page() ) {
 										if ( $index == 0) { echo 'active'; }
 									?>"
 								>
-
-									<?php if ($categories[0]->cat_ID == 5) : ?>
-										<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" />
-									<?php else: ?>
-										<h3><?php echo $categories[0]->cat_name; ?></h3>
-									<?php endif ?>
+									<div class="category-title">
+										<?php if ($categories[0]->cat_ID == 5) : ?>
+											<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" class="logo-colunas" />
+										<?php else: ?>
+											<h3>//<?php echo strtolower( $categories[0]->cat_name );  ?></h3>
+										<?php endif ?>
+									</div>
 										<div class="image-holder" style="overflow: hidden;">
 											<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
 										</div>
@@ -140,7 +141,7 @@ if ( is_front_page() ) {
 							?>">
 								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 								<div class="spotlight-caption">
-									<span>//categoria 1</span>
+									<span>//<?php echo strtolower($categories[0]->cat_name); ?></span>
 									<h4><?php echo get_the_title(); ?></h4>
 									<span><?php echo get_the_author(); ?></span>
 								</div>

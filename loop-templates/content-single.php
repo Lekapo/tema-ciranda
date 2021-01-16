@@ -30,7 +30,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="row">
 			<div class="entry-content">
 
-				<div class="col-12 offset-sm-2 col-sm-8 offset-lg-1 col-lg-6 offset-xl-2 col-xl-6">
+				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-8 offset-xl-2 col-xl-8">
 					<?php the_content(); ?>
 				</div>
 
