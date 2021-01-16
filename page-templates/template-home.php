@@ -109,7 +109,7 @@ if ( is_front_page() ) {
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
 
 				<!-- Spotlight -->
-				<div id="spotlight" class="box">
+				<div id="spotlight">
 
 					<?php
 						$args = array(
@@ -127,20 +127,21 @@ if ( is_front_page() ) {
 								$the_query->the_post();
 					?>
 
-						<div class="spotlight-item category-<?php
+						<a href="<?php the_permalink(); ?>">
+							<div class="spotlight-item box category-<?php
 
-						/* Banner Category Color*/
-						$categories = get_the_category();
-						echo $categories[0]->cat_ID;
-						?>" style="<?php if ($index == 0 ) { echo 'border-top: none;'; } ?>">
-
-							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-							<div class="spotlight-caption">
-								<span>//categoria 1</span>
-								<h4><?php echo get_the_title(); ?></h4>
-								<span><?php echo get_the_author(); ?></span>
+							/* Spotlight Category Color*/
+							$categories = get_the_category();
+							echo $categories[0]->cat_ID;
+							?>">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+								<div class="spotlight-caption">
+									<span>//categoria 1</span>
+									<h4><?php echo get_the_title(); ?></h4>
+									<span><?php echo get_the_author(); ?></span>
+								</div>
 							</div>
-						</div>
+						</a>
 							<?php
 								$index++;
 								}
@@ -213,7 +214,7 @@ if ( is_front_page() ) {
 							<?php
 							$excerpt = get_the_excerpt();
 
-							$excerpt = substr($excerpt, 0, 260);
+							$excerpt = substr($excerpt, 0, 180);
 							echo $excerpt;
 							?>
 						</p>

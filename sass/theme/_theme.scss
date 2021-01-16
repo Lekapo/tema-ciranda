@@ -3,6 +3,7 @@
 $primary: #fff;
 $primary-500: #ddd;
 $primary-700: #aaa;
+$secondary-300: #3a3a3a;
 $secondary: #1a1a1a;
 $secondary-500: #000;
 $category-color-1: #d42824;
@@ -76,8 +77,13 @@ html {
 	padding: 0 1.5rem;
 	margin-top: 5rem;
 	border-bottom: 1px solid #ccc;
+	transition: all .15s ease-out;
+
 	@media only screen and (min-width: 576px) {
 	  margin-top: 3rem;
+	}
+	a:hover{
+	  text-decoration: none;
 	}
   }
 
@@ -342,6 +348,7 @@ html {
 		   background-size: cover;
 		   height: 20rem;
 		   z-index: 0;
+		   overflow: hidden;
 
 		   @media only screen and (min-width: 576px) {
 			 height: 30rem;
@@ -350,7 +357,6 @@ html {
 		   @media only screen and (min-width: 768px) {
 			 height: 37rem;
 		   }
-
 		   &:after {
 			 content: "";
 
@@ -441,6 +447,8 @@ html {
  }
 
  #spotlight {
+   box-shadow: -1px 0 2px 0 rgba(0,0,0,0.12), 1px 0 2px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24);
+
    width: 100%;
 
    @media only screen and (min-width: 992px) {
@@ -448,13 +456,28 @@ html {
    }
 
    .spotlight-item {
-	 padding: 16px 0;
+	 box-shadow: none;
+	 margin-top: 0px;
+	 padding: 16px;
 	 display: flex;
 
 	 border-top: 1px solid #1a1a1a20;
+
+	 &:hover {
+	   box-shadow: -2px 0 2px 0 rgba(0,0,0,0.16), 2px 0 2px 0 rgba(0,0,0,0.16), 0 2px 2px 0 rgba(0,0,0,0.23);
+	   transform: scale(1.015);
+	   transition: transform .35s ease;
+
+	   &:hover {
+		 h4 {
+		   color: $secondary-300;
+		 }
+	   }
+	 }
 	 img {
-		height: 10rem;
+	   height: 10rem;
 	   width: 10rem;
+	   max-width: 10rem;
 	 }
 	 .spotlight-caption {
 	   font-family: 'Roboto', sans-serif;
@@ -468,10 +491,16 @@ html {
 		 margin-top: .2rem;
 		 margin-bottom: .6rem;
 	   }
+	 }
+   }
+	   &:hover {
+		 a {
+		   text-decoration: none;
+		 }
 
 	 }
    }
- }
+
 
  #latest {
 
@@ -482,6 +511,7 @@ html {
 	  padding: 0 1.5rem;
 	  margin-top: 3rem;
 	}
+
    .card-columns {
 	 column-gap: 2rem;
 
@@ -515,6 +545,12 @@ html {
 	 p {
 	   font-size: 1.5rem;
 		color: $secondary;
+	 }
+
+	 &:hover {
+	   box-shadow: -2px 0 2px 0 rgba(0,0,0,0.16), 2px 0 2px 0 rgba(0,0,0,0.16), 0 2px 2px 0 rgba(0,0,0,0.23);
+	   transform: translate3d(0, -3px, 0);
+	   transition: transform .15s ease-in;
 	 }
 
    }
