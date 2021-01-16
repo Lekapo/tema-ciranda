@@ -42,7 +42,7 @@ if ( is_front_page() ) {
 							<!-- First Slide -->
 							<div class="carousel-item category-<?php
 
-								/* Banner Category Colro*/
+								/* Banner Category Color*/
 									$categories = get_the_category();
 									echo $categories[0]->cat_ID;
 									?>
