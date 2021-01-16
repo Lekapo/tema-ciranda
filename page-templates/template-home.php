@@ -17,6 +17,7 @@ if ( is_front_page() ) {
 	get_template_part( 'global-templates/hero' );
 }
 ?>
+
 	<div class="container-fluid">
 		<div class="row" >
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-6 offset-xl-2 col-xl-5">
@@ -25,33 +26,56 @@ if ( is_front_page() ) {
 				<div id="banner" class="box">
 					<div id="carousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
+						<?php
+						$args = array(
+								'posts_per_page' => 3,
+						);
+						$index = 0;
+						// The Query
+						$the_query = new WP_Query( $args );
 
+						// The Loop
+						if ( $the_query->have_posts() ) {
+							while ( $the_query->have_posts() ) {
+								$the_query->the_post();
+								?>
 							<!-- First Slide -->
-							<div class="carousel-item category-1  active">
+							<div class="carousel-item category-1  <?php if ( $index == 0) { echo 'active'; }?>">
 								<h3>//categoria 1</h3>
-								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/morte.jpg" class="carousel-image d-block w-100" alt="..."></div>
+								<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
-									<h2>Morte, vida, arte, corpo</h2>
+									<h2><?php echo get_the_title(); ?></h2>
 								</div>
 							</div>
 
+
+							<?php
+								$index++;
+									}
+								} else {
+									// no posts found
+								}
+								/* Restore original Post Data */
+								wp_reset_postdata();
+								?>
+
 							<!-- Second Slide -->
-							<div class="carousel-item category-2 ">
+							<!--<div class="carousel-item category-2 ">
 								<h3>//categoria 2</h3>
-								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" class="carousel-image d-block w-100" alt="..."></div>
+								<div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/vereadores.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h2>
 								</div>
-							</div>
+							</div>-->
 
 							<!-- Third Slide -->
-							<div class="carousel-item category-3">
+							<!--<div class="carousel-item category-3">
 								<h3>//categoria 3</h3>
-								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" class="carousel-image d-block w-100" alt="..."></div>
+								<div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/empregos.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2>Empregos para a retomada do crescimento para 2021</h2>
 								</div>
-							</div>
+							</div>-->
 						</div>
 
 						<!-- Carousel Controls -->
@@ -170,6 +194,7 @@ if ( is_front_page() ) {
 			</div>
 		</div>
 	</div>
+
 
 
 
