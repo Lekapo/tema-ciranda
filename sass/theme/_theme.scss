@@ -412,6 +412,9 @@ html {
 		   @media only screen and (min-width: 768px) {
 			 height: 42rem;
 		   }
+		   @media only screen and (min-width: 992px) {
+			 height: 46rem;
+		   }
 		   &:after {
 			 content: "";
 
@@ -498,11 +501,6 @@ html {
 
 	   }
 	 }
-
-
-
-
-
    }
  }
 
@@ -517,7 +515,7 @@ html {
 
    .spotlight-item {
 	 box-shadow: none;
-	 margin-top: 0px;
+	 margin-top: 0;
 	 padding: 16px;
 	 display: flex;
 
@@ -535,18 +533,20 @@ html {
 	   }
 	 }
 	 img {
-	   height: 10rem;
-	   width: 10rem;
-	   max-width: 10rem;
+	   height: 12rem;
+	   width: 12rem;
+	   max-width: 12rem;
 	 }
 	 .spotlight-caption {
 	   font-family: 'Roboto', sans-serif;
-	   font-weight: 700;
+	   font-weight: 900;
 	   padding-left: 1rem;
 	   span {
 		 font-size: 1.2rem;
 	   }
 	   h4 {
+		 min-height: 4rem;
+		 font-size: 1.7rem;
 		 color: $secondary;
 		 margin-top: .2rem;
 		 margin-bottom: .6rem;
@@ -563,7 +563,7 @@ html {
 
 
  #latest {
-   margin-top: 10rem;
+   margin-top: 5rem;
 
    h3 {
 	 font-size: 4rem;
