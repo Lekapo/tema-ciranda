@@ -17,9 +17,9 @@ if ( is_front_page() ) {
 	get_template_part( 'global-templates/hero' );
 }
 ?>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row" >
-			<div class="col-12 col-lg-8">
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-6 offset-xl-2 col-xl-5">
 
 				<!-- Carousel -->
 				<div id="banner">
@@ -28,7 +28,7 @@ if ( is_front_page() ) {
 
 							<!-- First Slide -->
 							<div class="carousel-item category-1  active">
-								<h3>//Categoria 1</h3>
+								<h3>//categoria 1</h3>
 								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/morte.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2>Morte, vida, arte, corpo</h2>
@@ -37,7 +37,7 @@ if ( is_front_page() ) {
 
 							<!-- Second Slide -->
 							<div class="carousel-item category-2 ">
-								<h3>//Categoria 2</h3>
+								<h3>//categoria 2</h3>
 								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h2>
@@ -46,7 +46,7 @@ if ( is_front_page() ) {
 
 							<!-- Third Slide -->
 							<div class="carousel-item category-3">
-								<h3>//Categoria 3</h3>
+								<h3>//categoria 3</h3>
 								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" class="carousel-image d-block w-100" alt="..."></div>
 								<div class="carousel-caption">
 									<h2>Empregos para a retomada do crescimento para 2021</h2>
@@ -65,6 +65,36 @@ if ( is_front_page() ) {
 						</a>
 					</div>
 				</div>
+			</div>
+
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
+					<div id="spotlight">
+						<div class="spotlight-item category-1">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
+							<div class="spotlight-caption">
+								<span>//categoria 1</span>
+								<h4>Morte, vida, arte, corpo</h4>
+								<span>Nome Autor</span>
+							</div>
+						</div>
+						<div class="spotlight-item category-2">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" alt="">
+							<div class="spotlight-caption">
+								<span>//categoria 1</span>
+								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
+								<span>Nome Autor</span>
+							</div>
+						</div>
+						<div class="spotlight-item category-3">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
+							<div class="spotlight-caption">
+								<span>//categoria 1</span>
+								<h4>Empregos para a retomada do crescimento para 2021</h4>
+								<span>Nome Autor</span>
+							</div>
+						</div>
+					</div>
+
 			</div>
 		</div>
 	</div>

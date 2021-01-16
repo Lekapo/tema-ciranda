@@ -274,8 +274,10 @@ html {
 		   font-family: 'Patua One', cursive;
 		   font-size: 1.3rem;
 
+
 		   @media only screen and (min-width: 576px) {
 			 font-size: 2rem;
+			 height: 3rem;
 		   }
 		 }
 
@@ -290,7 +292,7 @@ html {
 		   }
 
 		   @media only screen and (min-width: 768px) {
-			 height: 40rem;
+			 height: 37rem;
 		   }
 
 		   &:after {
@@ -379,5 +381,43 @@ html {
 
 
 
+   }
+ }
+
+ #spotlight {
+   height: 50rem;
+   width: 100%;
+   margin-top: 3.5rem;
+
+   .spotlight-item {
+	 margin-top: 5px;
+	 height: 12rem;
+	 display: flex;
+	 img {
+		height: 10rem;
+	   width: 10rem;
+	 }
+	 .spotlight-caption {
+	   font-family: 'Roboto', sans-serif;
+	   font-weight: 700;
+	   padding-left: 1rem;
+	   span {
+		 font-size: 1.2rem;
+	   }
+	   h4 {
+		 color: $secondary;
+		 margin-top: .2rem;
+		 margin-bottom: .6rem;
+	   }
+
+	 }
+   }
+   .category-1 {
+   }
+
+   .category-2 {
+   }
+
+   .category-3 {
    }
  }
