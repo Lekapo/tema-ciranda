@@ -40,29 +40,33 @@ if ( is_front_page() ) {
 								$the_query->the_post();
 								?>
 							<!-- First Slide -->
-							<div class="carousel-item category-<?php
 
-								/* Banner Category Color*/
-									$categories = get_the_category();
-									echo $categories[0]->cat_ID;
-									?>
+							<a href="<?php the_permalink(); ?>">
+								<div class="carousel-item category-<?php
 
-								<?php /* Active class for the carousel */
-									if ( $index == 0) { echo 'active'; }
-								?>"
-							>
+									/* Banner Category Color*/
+										$categories = get_the_category();
+										echo $categories[0]->cat_ID;
+										?>
 
-								<?php if ($categories[0]->cat_ID == 5) : ?>
-									<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" />
-								<?php else: ?>
-									<h3><?php echo $categories[0]->cat_name; ?></h3>
-								<?php endif ?>
-								<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
-								<div class="carousel-caption">
-									<h2><?php echo get_the_title(); ?></h2>
+									<?php /* Active class for the carousel */
+										if ( $index == 0) { echo 'active'; }
+									?>"
+								>
+
+									<?php if ($categories[0]->cat_ID == 5) : ?>
+										<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" />
+									<?php else: ?>
+										<h3><?php echo $categories[0]->cat_name; ?></h3>
+									<?php endif ?>
+										<div class="image-holder" style="overflow: hidden;">
+											<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
+										</div>
+										<div class="carousel-caption">
+											<h2><?php echo get_the_title(); ?></h2>
+										</div>
+									</a>
 								</div>
-							</div>
-
 
 							<?php
 								$index++;
@@ -109,7 +113,7 @@ if ( is_front_page() ) {
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
 
 				<!-- Spotlight -->
-				<div id="spotlight" class="box">
+				<div id="spotlight">
 
 					<?php
 						$args = array(
@@ -127,20 +131,21 @@ if ( is_front_page() ) {
 								$the_query->the_post();
 					?>
 
-						<div class="spotlight-item category-<?php
+						<a href="<?php the_permalink(); ?>">
+							<div class="spotlight-item box category-<?php
 
-						/* Banner Category Color*/
-						$categories = get_the_category();
-						echo $categories[0]->cat_ID;
-						?>" style="<?php if ($index == 0 ) { echo 'border-top: none;'; } ?>">
-
-							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-							<div class="spotlight-caption">
-								<span>//categoria 1</span>
-								<h4><?php echo get_the_title(); ?></h4>
-								<span><?php echo get_the_author(); ?></span>
+							/* Spotlight Category Color*/
+							$categories = get_the_category();
+							echo $categories[0]->cat_ID;
+							?>">
+								<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+								<div class="spotlight-caption">
+									<span>//categoria 1</span>
+									<h4><?php echo get_the_title(); ?></h4>
+									<span><?php echo get_the_author(); ?></span>
+								</div>
 							</div>
-						</div>
+						</a>
 							<?php
 								$index++;
 								}
@@ -200,24 +205,26 @@ if ( is_front_page() ) {
 							while ( $the_query->have_posts() ) :
 								$the_query->the_post();
 					?>
-					<div class="latest-item box card decoration-category-<?php
+					<a href="<?php the_permalink(); ?>">
+						<div class="latest-item box card decoration-category-<?php
 
-					/* Banner Category Color*/
-					$categories = get_the_category();
-					echo $categories[0]->cat_ID . ' category-' . $categories[0]->cat_ID;
-					?>">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
-						<h4><?php echo get_the_title(); ?></h4>
-						<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
-						<p class="excerpt">
-							<?php
-							$excerpt = get_the_excerpt();
+						/* Banner Category Color*/
+						$categories = get_the_category();
+						echo $categories[0]->cat_ID . ' category-' . $categories[0]->cat_ID;
+						?>">
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
+							<h4><?php echo get_the_title(); ?></h4>
+							<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
+							<p class="excerpt">
+								<?php
+								$excerpt = get_the_excerpt();
 
-							$excerpt = substr($excerpt, 0, 260);
-							echo $excerpt;
-							?>
-						</p>
-					</div>
+								$excerpt = substr($excerpt, 0, 180);
+								echo $excerpt;
+								?>
+							</p>
+						</div>
+					</a>
 						<?php
 							$index++;
 
