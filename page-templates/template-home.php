@@ -107,7 +107,9 @@ if ( is_front_page() ) {
 			</div>
 
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
-					<div id="spotlight" class="box">
+
+				<!-- Spotlight -->
+				<div id="spotlight" class="box">
 
 					<?php
 					$args = array(
@@ -125,12 +127,18 @@ if ( is_front_page() ) {
 							$the_query->the_post();
 							?>
 
-						<div class="spotlight-item category-1" style="<?php if ($index == 0 ) { echo 'border-top: none;'; } ?>">
+						<div class="spotlight-item category-<?php
+
+						/* Banner Category Colro*/
+						$categories = get_the_category();
+						echo $categories[0]->cat_ID;
+						?>" style="<?php if ($index == 0 ) { echo 'border-top: none;'; } ?>">
+
 							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
 								<h4><?php echo get_the_title(); ?></h4>
-								<span>Nome Autor</span>
+								<span><?php echo get_the_author(); ?></span>
 							</div>
 						</div>
 							<?php
@@ -159,8 +167,7 @@ if ( is_front_page() ) {
 								<span>Nome Autor</span>
 							</div>
 						</div>-->
-					</div>
-
+				</div>
 			</div>
 		</div>
 		<div class="row">
