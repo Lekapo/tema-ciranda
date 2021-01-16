@@ -93,16 +93,43 @@ if ( is_front_page() ) {
 
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
 					<div id="spotlight" class="box">
-						<div class="spotlight-item category-1" style="border-top: none;">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="">
+
+					<?php
+					$args = array(
+							'posts_per_page' => 3,
+							'offset' => 3,
+
+					);
+					$index = 0;
+					// The Query
+					$the_query = new WP_Query( $args );
+
+					// The Loop
+					if ( $the_query->have_posts() ) {
+						while ( $the_query->have_posts() ) {
+							$the_query->the_post();
+							?>
+
+						<div class="spotlight-item category-1" style="<?php if ($index == 0 ) { echo 'border-top: none;'; } ?>">
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
-								<h4>Heu, barbatus abaculus!</h4>
+								<h4><?php echo get_the_title(); ?></h4>
 								<span>Nome Autor</span>
 							</div>
 						</div>
+							<?php
+							$index++;
+						}
+					} else {
+						// no posts found
+					}
+					/* Restore original Post Data */
+					wp_reset_postdata();
+					?>
+							<!--
 						<div class="spotlight-item category-2">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" alt="">
+							<img src="<?php /*echo get_template_directory_uri(); */?>/images/vereadores.jpg" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
 								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
@@ -110,13 +137,13 @@ if ( is_front_page() ) {
 							</div>
 						</div>
 						<div class="spotlight-item category-3">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
+							<img src="<?php /*echo get_template_directory_uri(); */?>/images/empregos.jpg" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
 								<h4>Volare patienter ducunt ad raptus fluctui. Dexter, grandis nutrixs semper. </h4>
 								<span>Nome Autor</span>
 							</div>
-						</div>
+						</div>-->
 					</div>
 
 			</div>
