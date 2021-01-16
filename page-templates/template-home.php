@@ -22,7 +22,7 @@ if ( is_front_page() ) {
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-6 offset-xl-2 col-xl-5">
 
 				<!-- Carousel -->
-				<div id="banner">
+				<div id="banner" class="box">
 					<div id="carousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
 
@@ -68,12 +68,12 @@ if ( is_front_page() ) {
 			</div>
 
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
-					<div id="spotlight">
-						<div class="spotlight-item category-1">
+					<div id="spotlight" class="box">
+						<div class="spotlight-item category-1" style="border-top: none;">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
-								<h4>Morte, vida, arte, corpo</h4>
+								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
 								<span>Nome Autor</span>
 							</div>
 						</div>
@@ -89,7 +89,7 @@ if ( is_front_page() ) {
 							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
-								<h4>Empregos para a retomada do crescimento para 2021</h4>
+								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
 								<span>Nome Autor</span>
 							</div>
 						</div>

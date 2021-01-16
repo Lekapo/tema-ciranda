@@ -265,7 +265,7 @@ html {
  #banner {
    width: 100%;
    #carousel {
-
+	 padding: 16px 0px;
 	 .carousel-inner {
 
 	   .carousel-item {
@@ -385,14 +385,17 @@ html {
  }
 
  #spotlight {
-   height: 50rem;
    width: 100%;
-   margin-top: 3.5rem;
+   margin-top: 3rem;
 
+   @media only screen and (min-width: 992px) {
+	 margin-top: 0;
+   }
    .spotlight-item {
-	 margin-top: 5px;
-	 height: 12rem;
+	 padding: 16px 0;
 	 display: flex;
+
+	 border-top: 1px solid #1a1a1a20;
 	 img {
 		height: 10rem;
 	   width: 10rem;
@@ -421,3 +424,10 @@ html {
    .category-3 {
    }
  }
+
+
+.box {
+  background: #f6f6f6;
+  box-shadow: -1px 0 2px 0 rgba(0,0,0,0.12), 1px 0 2px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24);
+  padding: 0 16px;
+}
