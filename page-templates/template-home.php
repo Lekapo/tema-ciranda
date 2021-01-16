@@ -186,6 +186,8 @@ if ( is_front_page() ) {
 					<?php
 						$paged = (get_query_var("page")) ? get_query_var("page") : 1;
 						$args = array(
+								'orderby' => 'date',
+								'order' => 'DESC',
 								'posts_per_page' => 8,
 								'paged'=>$paged,
 

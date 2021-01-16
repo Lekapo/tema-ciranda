@@ -40,7 +40,7 @@ html {
 	}
   }
   .decoration-category-5 {
-	border-top: 5px solid lighten( $category-color-6, 15%  ) ;
+	border-top: 5px solid lighten( $category-color-6, 25%  ) ;
 	&:hover {
 	  border-top: 5px solid darken( $category-color-6, 5%);
 	}
@@ -575,20 +575,16 @@ html {
 
  }
 .card-columns {
-  column-gap: 2rem;
+  column-gap: 4rem;
 
   .card {
 	font-family: 'Roboto', sans-serif;
 	padding: 1.5rem;
-
-
-
 	&:hover {
 	  box-shadow: -2px 0 2px 0 rgba(0,0,0,0.16), 2px 0 2px 0 rgba(0,0,0,0.16), 0 2px 2px 0 rgba(0,0,0,0.23);
 	  transform: translate3d(0, -3px, 0);
 	  transition: transform .15s ease-in;
 	}
-	display: inline-block;
 	img {
 
 	}
@@ -608,13 +604,13 @@ html {
   }
 
   @media only screen and (min-width: 576px) {
-	column-count: 2;
+	column-count: 1;
   }
   @media only screen and (min-width: 768px) {
-	column-count: 3;
+	column-count: 2;
   }
   @media only screen and (min-width: 1200px) {
-	column-count: 4;
+	column-count: 3;
   }
 }
 
