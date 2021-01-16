@@ -205,24 +205,26 @@ if ( is_front_page() ) {
 							while ( $the_query->have_posts() ) :
 								$the_query->the_post();
 					?>
-					<div class="latest-item box card decoration-category-<?php
+					<a href="<?php the_permalink(); ?>">
+						<div class="latest-item box card decoration-category-<?php
 
-					/* Banner Category Color*/
-					$categories = get_the_category();
-					echo $categories[0]->cat_ID . ' category-' . $categories[0]->cat_ID;
-					?>">
-						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
-						<h4><?php echo get_the_title(); ?></h4>
-						<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
-						<p class="excerpt">
-							<?php
-							$excerpt = get_the_excerpt();
+						/* Banner Category Color*/
+						$categories = get_the_category();
+						echo $categories[0]->cat_ID . ' category-' . $categories[0]->cat_ID;
+						?>">
+							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
+							<h4><?php echo get_the_title(); ?></h4>
+							<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
+							<p class="excerpt">
+								<?php
+								$excerpt = get_the_excerpt();
 
-							$excerpt = substr($excerpt, 0, 180);
-							echo $excerpt;
-							?>
-						</p>
-					</div>
+								$excerpt = substr($excerpt, 0, 180);
+								echo $excerpt;
+								?>
+							</p>
+						</div>
+					</a>
 						<?php
 							$index++;
 

@@ -16,19 +16,34 @@ $category-color-6: #1a1a1a;
 html {
   font-size: 10px;
   .decoration-category-7 {
-	border-top: 5px solid $category-color-1;
+	border-top: 5px solid darken( $category-color-1, 10% ) ;
+	&:hover {
+	  border-top: 5px solid lighten( saturate( $category-color-1, 99% ), 10%);
+	}
   }
   .decoration-category-4 {
-	border-top: 5px solid $category-color-2;
+	border-top: 5px solid darken( $category-color-2, 10%  ) ;
+	&:hover {
+	  border-top: 5px solid lighten( saturate( $category-color-2, 99% ), 15%);
+	}
   }
   .decoration-category-3 {
-	border-top: 5px solid $category-color-3;
+	border-top: 5px solid darken( $category-color-3, 20%  ) ;
+	&:hover {
+	  border-top: 5px solid adjust-hue( lighten( saturate( $category-color-3, 99% ), 5%), 10% );
+	}
   }
   .decoration-category-8 {
-	border-top: 5px solid $category-color-4;
+	border-top: 5px solid darken( $category-color-4, 20%  ) ;
+	&:hover {
+	  border-top: 5px solid lighten( saturate( $category-color-4, 99% ), 5%);
+	}
   }
   .decoration-category-5 {
-	border-top: 5px solid $category-color-6;
+	border-top: 5px solid darken( $category-color-6, 10%  ) ;
+	&:hover {
+	  border-top: 5px solid lighten( saturate( #000, 99% ), 5%);
+	}
   }
 
   /* Categoria Brasil */
@@ -511,7 +526,6 @@ html {
 
 
  #latest {
-
 	h3 {
 	  font-size: 4rem;
 	  font-family: 'Patua One', cursive;
@@ -522,6 +536,9 @@ html {
 
    .card-columns {
 	 column-gap: 2rem;
+
+	 .card {
+	 }
 
 	 @media only screen and (min-width: 576px) {
 	   column-count: 2;
