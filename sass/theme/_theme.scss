@@ -260,116 +260,124 @@ html {
 	}
   }
 }
-#banner-row {
-  @media only screen and (min-width: 768px) {
-	width: 70rem;
-  }
-  #banner {
-	height: 40rem;
-	width: 100%; // so bottom line on mobile will cover full width
-	#carousel {
-	  @media only screen and (min-width: 576px) {
-		display: block;
-	  }
-	  @media only screen and (min-width: 768px) {
 
-	  }
-	  display: none;
-	  height: 40rem;
-	  overflow: hidden;
 
-	  .carousel-inner {
-		.carousel-item {
-		  img {
-			@media only screen and (min-width: 576px) {
-			}
-			@media only screen and (min-width: 768px) {
-			  height: 40rem;
-			}
-			position: relative;
-			height: 20rem;
-			width: 70rem;
-		  }
-		}
-	  }
-	}
+ #banner {
+   width: 100%;
+   #carousel {
 
-	#title-carousel {
-	  @media only screen and (min-width: 576px) {
-		top: -20rem;
+	 .carousel-inner {
 
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	  }
-	  @media only screen and (min-width: 768px) {
-		top: -30rem;
-		height: 30rem;
-		width: 30rem;
+	   .carousel-item {
 
-		box-shadow: 4px -4px 10px #484848a3;
-	  }
-	  height: 20rem;
-	  width: 100%;
-	  background: $primary;
+		 h3 {
+		   font-family: 'Patua One', cursive;
+		   font-size: 1.3rem;
 
-	  top: 0rem;
+		   @media only screen and (min-width: 576px) {
+			 font-size: 2rem;
+		   }
+		 }
 
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  padding: 10px;
+		 .carousel-image {
+		   background-position: 50%;
+		   background-size: cover;
+		   height: 20rem;
+		   z-index: 0;
 
-	  .carousel-inner {
+		   @media only screen and (min-width: 576px) {
+			 height: 30rem;
+		   }
 
-		.carousel-item {
+		   @media only screen and (min-width: 768px) {
+			 height: 40rem;
+		   }
 
-		  margin-top: 2rem;
+		   &:after {
+			 content: "";
 
-		  @media only screen and (min-width: 768px) {
+			 position: absolute;
 
-		  }
-		  .title-carousel-holder {
-			.title-carousel-title-holder {
+			 height: 100%;
+			 width: 100%;
 
-			  display: flex;
-			  align-items: center;
+			 @media only screen and (min-width: 576px) {
 
-			  @media only screen and (min-width: 768px) {
-				height: 20rem; // so the size of the title stay the same in the carousel.
-			  }
-			  height: 10rem; // so the size of the title stay the same in the carousel.
-			  h2 {
-				color: $secondary;
-				font-size: 2rem;
-				font-family: 'Roboto', sans-serif;
-				padding: 10px;
-				margin: 10px 0px;
-				@media only screen and (min-width: 768px) {
-				  font-size: 2.5rem;
-				}
+			   background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.2) 40%,rgba(0,0,0,.2) 80%,rgba(0,0,0,.4));
 
-			}
+			 }
+		   }
+		 }
 
-			}
-			h3 {
-			  font-family: 'Patua One', cursive;
-			  font-size: 1.7rem;
+		 .carousel-caption {
+		   color: $secondary;
+		   text-align: left;
+		   padding: 10px;
+		   position:relative;
+		   left: 0;
+		   right: 0;
+		   bottom: 0;
 
-			  @media only screen and (min-width: 768px) {
-				font-size: 2rem;
+		   @media only screen and (min-width: 576px) {
+			 bottom: 20px;
+			 position: absolute;
+			 color: $primary;
+		   }
+		   h2 {
+			 font-family: 'Roboto', sans-serif;
+			 font-weight: 900;
+			 font-size: 2.3rem;
+			 text-shadow: none;
 
-			  }
+			 @media only screen and (min-width: 576px) {
+			   font-size: 2.8rem;
+			   text-shadow: 0 1px 3px rgba(0,0,0,.8);
 
-			  @media only screen and (min-width: 768px) {
+			 }
+		   }
+		 }
 
-			  }
-			}
-			.line {
-			  width: 100%;
 
-			}
-		  }
-		}
-	  }
-	}
-  }
-}
+	   }
+	 }
+
+	 .carousel-control-prev {
+	   opacity: 1;
+
+	   height: 30rem;
+
+	   @media only screen and (min-width: 576px) {
+		 height: 100%;
+	   }
+
+	   .carousel-control-prev-icon {
+	   }
+
+	   .sr-only {
+
+	   }
+	 }
+
+	 .carousel-control-next {
+	   opacity: 1;
+	   height: 30rem;
+
+	   @media only screen and (min-width: 576px) {
+		 height: 100%;
+	   }
+
+	   .carousel-control-next-icon {
+
+	   }
+
+	   .sr-only {
+
+	   }
+	 }
+
+
+
+
+
+   }
+ }
