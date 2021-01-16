@@ -32,6 +32,14 @@ html {
   .category-3 {
 	color: $category-color-3
   }
+
+  .box {
+	background: #f6f6f6;
+	box-shadow: -1px 0 2px 0 rgba(0,0,0,0.12), 1px 0 2px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24);
+	padding: 0 16px;
+	margin-top: 3rem;
+  }
+
 }
 
 .top-header {
@@ -264,6 +272,9 @@ html {
 
  #banner {
    width: 100%;
+   @media only screen and (min-width: 992px) {
+	 margin-top: 0;
+   }
    #carousel {
 	 padding: 16px 0px;
 	 .carousel-inner {
@@ -386,11 +397,11 @@ html {
 
  #spotlight {
    width: 100%;
-   margin-top: 3rem;
 
    @media only screen and (min-width: 992px) {
 	 margin-top: 0;
    }
+
    .spotlight-item {
 	 padding: 16px 0;
 	 display: flex;
@@ -425,9 +436,30 @@ html {
    }
  }
 
+ #latest {
+	h3 {
+	  font-size: 4rem;
+	  font-family: 'Patua One', cursive;
+	  color: $category-color-5;
+	  padding: 0 16px;
+	  margin-top: 3rem;
+	}
 
-.box {
-  background: #f6f6f6;
-  box-shadow: -1px 0 2px 0 rgba(0,0,0,0.12), 1px 0 2px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24);
-  padding: 0 16px;
-}
+   .latest-item {
+	 font-family: 'Roboto', sans-serif;
+	 img {
+
+	 }
+	 h4 {
+		font-size: 2rem;
+	 }
+	 span {
+
+	 }
+	 p {
+
+	 }
+   }
+ }
+
+

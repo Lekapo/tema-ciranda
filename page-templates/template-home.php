@@ -70,10 +70,10 @@ if ( is_front_page() ) {
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
 					<div id="spotlight" class="box">
 						<div class="spotlight-item category-1" style="border-top: none;">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
-								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
+								<h4>Heu, barbatus abaculus!</h4>
 								<span>Nome Autor</span>
 							</div>
 						</div>
@@ -89,12 +89,84 @@ if ( is_front_page() ) {
 							<img src="<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" alt="">
 							<div class="spotlight-caption">
 								<span>//categoria 1</span>
-								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
+								<h4>Volare patienter ducunt ad raptus fluctui. Dexter, grandis nutrixs semper. </h4>
 								<span>Nome Autor</span>
 							</div>
 						</div>
 					</div>
 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
+				<div id="latest">
+					<h3>//todas</h3>
+					<div class="row">
+						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+							<div class="latest-item box">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
+								<h4>Titulo</h4>
+								<span class="author"></span>
+								<p class="excerpt">
+									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+							<div class="latest-item box">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
+								<h4>Titulo</h4>
+								<span class="author">Por <em>Nome do Autor</em></span>
+								<p class="excerpt">
+									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+							<div class="latest-item box">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
+								<h4>Titulo</h4>
+								<span class="author"></span>
+								<p class="excerpt">
+									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+							<div class="latest-item box">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
+								<h4>Titulo</h4>
+								<span class="author"></span>
+								<p class="excerpt">
+									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+							<div class="latest-item box">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
+								<h4>Titulo</h4>
+								<span class="author">Por <em>Nome do Autor</em></span>
+								<p class="excerpt">
+									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
+							<div class="latest-item box">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
+								<h4>Titulo</h4>
+								<span class="author"></span>
+								<p class="excerpt">
+									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
