@@ -270,6 +270,15 @@ html {
 
 	   .carousel-item {
 
+		 h3 {
+		   font-family: 'Patua One', cursive;
+		   font-size: 1.3rem;
+
+		   @media only screen and (min-width: 576px) {
+			 font-size: 2rem;
+		   }
+		 }
+
 		 .carousel-image {
 		   background-position: 50%;
 		   background-size: cover;
@@ -287,24 +296,44 @@ html {
 		   &:after {
 			 content: "";
 
-			 background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.2) 40%,rgba(0,0,0,.2) 80%,rgba(0,0,0,.4));
-
 			 position: absolute;
 
 			 height: 100%;
 			 width: 100%;
+
+			 @media only screen and (min-width: 576px) {
+
+			   background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.2) 40%,rgba(0,0,0,.2) 80%,rgba(0,0,0,.4));
+
+			 }
 		   }
 		 }
 
 		 .carousel-caption {
-			color: $primary;
+		   color: $secondary;
+		   text-align: left;
+		   padding: 10px;
+		   position:relative;
+		   left: 0;
+		   right: 0;
+		   bottom: 0;
+
+		   @media only screen and (min-width: 576px) {
+			 bottom: 20px;
+			 position: absolute;
+			 color: $primary;
+		   }
 		   h2 {
 			 font-family: 'Roboto', sans-serif;
 			 font-weight: 900;
-		   }
+			 font-size: 2.3rem;
+			 text-shadow: none;
 
-		   p {
+			 @media only screen and (min-width: 576px) {
+			   font-size: 2.8rem;
+			   text-shadow: 0 1px 3px rgba(0,0,0,.8);
 
+			 }
 		   }
 		 }
 
@@ -313,9 +342,15 @@ html {
 	 }
 
 	 .carousel-control-prev {
+	   opacity: 1;
+
+	   height: 30rem;
+
+	   @media only screen and (min-width: 576px) {
+		 height: 100%;
+	   }
 
 	   .carousel-control-prev-icon {
-
 	   }
 
 	   .sr-only {
@@ -324,6 +359,12 @@ html {
 	 }
 
 	 .carousel-control-next {
+	   opacity: 1;
+	   height: 30rem;
+
+	   @media only screen and (min-width: 576px) {
+		 height: 100%;
+	   }
 
 	   .carousel-control-next-icon {
 

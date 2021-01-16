@@ -27,29 +27,29 @@ if ( is_front_page() ) {
 						<div class="carousel-inner">
 
 							<!-- First Slide -->
-							<div class="carousel-item active">
+							<div class="carousel-item category-1  active">
+								<h3>//Categoria 1</h3>
 								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/morte.jpg" class="carousel-image d-block w-100" alt="..."></div>
-								<div class="carousel-caption d-none d-md-block">
-									<h2>First slide label</h2>
-									<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+								<div class="carousel-caption">
+									<h2>Morte, vida, arte, corpo</h2>
 								</div>
 							</div>
 
-							<!-- First Slide -->
-							<div class="carousel-item">
+							<!-- Second Slide -->
+							<div class="carousel-item category-2 ">
+								<h3>//Categoria 2</h3>
 								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/vereadores.jpg" class="carousel-image d-block w-100" alt="..."></div>
-								<div class="carousel-caption d-none d-md-block">
-									<h2>Second slide label</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								<div class="carousel-caption">
+									<h2>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h2>
 								</div>
 							</div>
 
-							<!-- First Slide -->
-							<div class="carousel-item">
+							<!-- Third Slide -->
+							<div class="carousel-item category-3">
+								<h3>//Categoria 3</h3>
 								<div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/empregos.jpg" class="carousel-image d-block w-100" alt="..."></div>
-								<div class="carousel-caption d-none d-md-block">
-									<h2>Third slide label</h2>
-									<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+								<div class="carousel-caption">
+									<h2>Empregos para a retomada do crescimento para 2021</h2>
 								</div>
 							</div>
 						</div>
@@ -67,7 +67,6 @@ if ( is_front_page() ) {
 				</div>
 			</div>
 		</div>
-		<p>lekapo</p>
 	</div>
 
 
