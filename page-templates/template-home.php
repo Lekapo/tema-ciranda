@@ -180,7 +180,7 @@ if ( is_front_page() ) {
 					<?php
 						$paged = (get_query_var("page")) ? get_query_var("page") : 1;
 						$args = array(
-								'posts_per_page' => 6,
+								'posts_per_page' => 8,
 								'paged'=>$paged,
 
 						);
@@ -200,12 +200,22 @@ if ( is_front_page() ) {
 							while ( $the_query->have_posts() ) :
 								$the_query->the_post();
 					?>
-					<div class="latest-item box decoration-category-3 card">
+					<div class="latest-item box card decoration-category-<?php
+
+					/* Banner Category Color*/
+					$categories = get_the_category();
+					echo $categories[0]->cat_ID . ' category-' . $categories[0]->cat_ID;
+					?>">
 						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
 						<h4><?php echo get_the_title(); ?></h4>
-						<span class="author">Por <em><?php echo get_the_author(); ?></em></span>
+						<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
 						<p class="excerpt">
-							Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+							<?php
+							$excerpt = get_the_excerpt();
+
+							$excerpt = substr($excerpt, 0, 260);
+							echo $excerpt;
+							?>
 						</p>
 					</div>
 						<?php

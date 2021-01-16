@@ -15,16 +15,19 @@ $category-color-6: #1a1a1a;
 html {
   font-size: 10px;
   .decoration-category-7 {
-	border-top: 3px solid $category-color-1;
+	border-top: 5px solid $category-color-1;
   }
   .decoration-category-4 {
-	border-top: 3px solid $category-color-2;
+	border-top: 5px solid $category-color-2;
   }
   .decoration-category-3 {
-	border-top: 3px solid $category-color-3;
+	border-top: 5px solid $category-color-3;
   }
   .decoration-category-8 {
-	border-top: 3px solid $category-color-4;
+	border-top: 5px solid $category-color-4;
+  }
+  .decoration-category-5 {
+	border-top: 5px solid $category-color-6;
   }
 
   /* Categoria Brasil */
@@ -50,8 +53,12 @@ html {
   .box {
 	background: #f6f6f6;
 	box-shadow: -1px 0 2px 0 rgba(0,0,0,0.12), 1px 0 2px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24);
-	padding: 0 16px;
-	margin-top: 3rem;
+	padding: 0 1.5rem;
+	margin-top: 5rem;
+	border-bottom: 1px solid #ccc;
+	@media only screen and (min-width: 576px) {
+	  margin-top: 3rem;
+	}
   }
 
 }
@@ -286,9 +293,8 @@ html {
 
  #banner {
    width: 100%;
-   @media only screen and (min-width: 992px) {
-	 margin-top: 0;
-   }
+   margin-top: 0;
+
    #carousel {
 	 padding: 16px 0px;
 	 .carousel-inner {
@@ -445,14 +451,6 @@ html {
 
 	 }
    }
-   .category-1 {
-   }
-
-   .category-2 {
-   }
-
-   .category-3 {
-   }
  }
 
  #latest {
@@ -461,24 +459,44 @@ html {
 	  font-size: 4rem;
 	  font-family: 'Patua One', cursive;
 	  color: $category-color-5;
-	  padding: 0 16px;
+	  padding: 0 1.5rem;
 	  margin-top: 3rem;
 	}
+   .card-columns {
+	 column-gap: 2rem;
+
+	 @media only screen and (min-width: 576px) {
+	   column-count: 2;
+	 }
+	 @media only screen and (min-width: 768px) {
+	   column-count: 3;
+	 }
+	 @media only screen and (min-width: 1200px) {
+	   column-count: 4;
+	 }
+   }
 
    .latest-item {
 	 font-family: 'Roboto', sans-serif;
+	 padding: 1.5rem;
+
 	 img {
 
 	 }
 	 h4 {
 		font-size: 2rem;
+	   padding: 1.5rem 0;
 	 }
 	 span {
-
+	   em {
+		 color: $secondary;
+	   }
 	 }
 	 p {
-
+	   font-size: 1.5rem;
+		color: $secondary;
 	 }
+
    }
 
    .pagination {
@@ -491,7 +509,7 @@ html {
 	   color: $category-color-5;
 	 }
 	 .page-numbers {
-	   padding: 0 1rem;
+	   padding: 0 1.5rem;
 	 }
    }
  }
