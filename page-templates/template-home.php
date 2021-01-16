@@ -239,14 +239,13 @@ if ( is_front_page() ) {
 						?>
 					</div>
 					<div class="col-12">
+
 						<?php
-						/* Pagination */
-						the_posts_pagination( array(
+
+						understrap_pagination(array(
 								'mid_size'  => 2,
 								'add_fragment' => '#latest',
-								'prev_text' => __( 'Novos', 'textdomain' ),
-								'next_text' => __( 'Mais Antigos', 'textdomain' ),
-						) );
+								));
 
 						// Restore original query object
 						$wp_query = null;
