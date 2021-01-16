@@ -40,29 +40,33 @@ if ( is_front_page() ) {
 								$the_query->the_post();
 								?>
 							<!-- First Slide -->
-							<div class="carousel-item category-<?php
 
-								/* Banner Category Color*/
-									$categories = get_the_category();
-									echo $categories[0]->cat_ID;
-									?>
+							<a href="<?php the_permalink(); ?>">
+								<div class="carousel-item category-<?php
 
-								<?php /* Active class for the carousel */
-									if ( $index == 0) { echo 'active'; }
-								?>"
-							>
+									/* Banner Category Color*/
+										$categories = get_the_category();
+										echo $categories[0]->cat_ID;
+										?>
 
-								<?php if ($categories[0]->cat_ID == 5) : ?>
-									<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" />
-								<?php else: ?>
-									<h3><?php echo $categories[0]->cat_name; ?></h3>
-								<?php endif ?>
-								<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
-								<div class="carousel-caption">
-									<h2><?php echo get_the_title(); ?></h2>
+									<?php /* Active class for the carousel */
+										if ( $index == 0) { echo 'active'; }
+									?>"
+								>
+
+									<?php if ($categories[0]->cat_ID == 5) : ?>
+										<img src="<?php echo z_taxonomy_image_url($categories[1]->cat_ID); ?>" />
+									<?php else: ?>
+										<h3><?php echo $categories[0]->cat_name; ?></h3>
+									<?php endif ?>
+										<div class="image-holder" style="overflow: hidden;">
+											<div style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>" class="carousel-image d-block w-100" alt="..."></div>
+										</div>
+										<div class="carousel-caption">
+											<h2><?php echo get_the_title(); ?></h2>
+										</div>
+									</a>
 								</div>
-							</div>
-
 
 							<?php
 								$index++;
