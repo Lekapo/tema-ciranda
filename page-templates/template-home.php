@@ -112,24 +112,24 @@ if ( is_front_page() ) {
 				<div id="spotlight" class="box">
 
 					<?php
-					$args = array(
-							'posts_per_page' => 3,
-							'offset' => 3,
+						$args = array(
+								'posts_per_page' => 3,
+								'offset' => 3,
 
-					);
-					$index = 0;
-					// The Query
-					$the_query = new WP_Query( $args );
+						);
+						$index = 0;
+						// The Query
+						$the_query = new WP_Query( $args );
 
-					// The Loop
-					if ( $the_query->have_posts() ) {
-						while ( $the_query->have_posts() ) {
-							$the_query->the_post();
-							?>
+						// The Loop
+						if ( $the_query->have_posts() ) {
+							while ( $the_query->have_posts() ) {
+								$the_query->the_post();
+					?>
 
 						<div class="spotlight-item category-<?php
 
-						/* Banner Category Colro*/
+						/* Banner Category Color*/
 						$categories = get_the_category();
 						echo $categories[0]->cat_ID;
 						?>" style="<?php if ($index == 0 ) { echo 'border-top: none;'; } ?>">
@@ -142,14 +142,14 @@ if ( is_front_page() ) {
 							</div>
 						</div>
 							<?php
-							$index++;
-						}
-					} else {
-						// no posts found
-					}
-					/* Restore original Post Data */
-					wp_reset_postdata();
-					?>
+								$index++;
+								}
+								} else {
+									// no posts found
+								}
+								/* Restore original Post Data */
+								wp_reset_postdata();
+							?>
 							<!--
 						<div class="spotlight-item category-2">
 							<img src="<?php /*echo get_template_directory_uri(); */?>/images/vereadores.jpg" alt="">
@@ -172,73 +172,69 @@ if ( is_front_page() ) {
 		</div>
 		<div class="row">
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
+
+				<!-- Latest -->
 				<div id="latest">
 					<h3>//todas</h3>
-					<div class="row">
-						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
-							<div class="latest-item box">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
-								<h4>Titulo</h4>
-								<span class="author"></span>
-								<p class="excerpt">
-									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
-								</p>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
-							<div class="latest-item box">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
-								<h4>Titulo</h4>
-								<span class="author">Por <em>Nome do Autor</em></span>
-								<p class="excerpt">
-									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
-								</p>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
-							<div class="latest-item box">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
-								<h4>Titulo</h4>
-								<span class="author"></span>
-								<p class="excerpt">
-									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
-							<div class="latest-item box">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
-								<h4>Titulo</h4>
-								<span class="author"></span>
-								<p class="excerpt">
-									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
-								</p>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
-							<div class="latest-item box">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
-								<h4>Titulo</h4>
-								<span class="author">Por <em>Nome do Autor</em></span>
-								<p class="excerpt">
-									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
-								</p>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6 col-lg-6 col-xl-4">
-							<div class="latest-item box">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/morte.jpg" alt="" class="latest-image">
-								<h4>Titulo</h4>
-								<span class="author"></span>
-								<p class="excerpt">
-									Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
-								</p>
-							</div>
-						</div>
-					</div>
+					<div class="card-columns">
+					<?php
+						$paged = (get_query_var("page")) ? get_query_var("page") : 1;
+						$args = array(
+								'posts_per_page' => 6,
+								'paged'=>$paged,
 
+						);
+						$index = 0;
+						// The Query
+						$the_query = new WP_Query( $args );
+						global $wp_query;
+						// Put default query object in a temp variable
+						$tmp_query = $wp_query;
+						// Now wipe it out completely
+						$wp_query = null;
+						// Re-populate the global with our custom query
+						$wp_query = $the_query;
+
+						// The Loop
+						if ( $the_query->have_posts() ) :
+							while ( $the_query->have_posts() ) :
+								$the_query->the_post();
+					?>
+					<div class="latest-item box decoration-category-3 card">
+						<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
+						<h4><?php echo get_the_title(); ?></h4>
+						<span class="author">Por <em><?php echo get_the_author(); ?></em></span>
+						<p class="excerpt">
+							Decors sunt parmas de secundus fluctus.Eheu, bi-color armarium!Gratis, fatalis speciess absolute convertam de placidus, fortis fluctus.
+						</p>
+					</div>
+						<?php
+							$index++;
+
+							endwhile;
+
+							wp_reset_postdata();
+
+							else :
+								// no posts found
+							endif;
+						?>
+					</div>
+					<div class="col-12">
+						<?php
+						/* Pagination */
+						the_posts_pagination( array(
+								'mid_size'  => 2,
+								'add_fragment' => '#latest',
+								'prev_text' => __( 'Novos', 'textdomain' ),
+								'next_text' => __( 'Mais Antigos', 'textdomain' ),
+						) );
+
+						// Restore original query object
+						$wp_query = null;
+						$wp_query = $tmp_query;
+						?>
+					</div>
 				</div>
 			</div>
 		</div>
