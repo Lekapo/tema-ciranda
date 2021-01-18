@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								echo $categories[0]->slug;
 								?>">
 									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
-									<h4><?php echo get_the_title(); ?></h4>
+									<h2><?php echo get_the_title(); ?></h2>
 									<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
 									<p class="excerpt">
 										<?php
