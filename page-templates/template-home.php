@@ -20,8 +20,7 @@ if ( is_front_page() ) {
 
 	<div class="container-fluid">
 		<div class="row" >
-			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-6 offset-xl-2 col-xl-5">
-
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-7 offset-xl-1 col-xl-6">
 				<!-- Carousel -->
 				<div id="banner">
 					<div id="carousel" class="carousel slide" data-ride="carousel">
@@ -111,8 +110,8 @@ if ( is_front_page() ) {
 				</div>
 			</div>
 
-			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-4 col-xl-3">
 
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-5 col-xl-4">
 				<!-- Spotlight -->
 				<div id="spotlight">
 
@@ -176,8 +175,10 @@ if ( is_front_page() ) {
 				</div>
 			</div>
 		</div>
+
+
 		<div class="row">
-			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8">
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-12 offset-xl-1 col-xl-10">
 
 				<!-- Latest -->
 				<div id="latest">
@@ -216,7 +217,7 @@ if ( is_front_page() ) {
 						echo $categories[0]->slug;
 						?>">
 							<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
-							<h4><?php echo get_the_title(); ?></h4>
+							<h2><?php echo get_the_title(); ?></h2>
 							<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
 							<p class="excerpt">
 								<?php

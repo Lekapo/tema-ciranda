@@ -30,28 +30,28 @@ html {
 
   /* Categoria Brasil */
   .category-brasil {
-	a, span, h2, h3, h4, h5, h6 {
+	a, span, h3, h4, h5, h6 {
 	  color: $category-color-brasil;
 	}
   }
 
   /* Categoria Internacional */
   .category-internacional {
-	a, span, h2, h3, h4, h5, h6 {
+	a, span, h3, h4, h5, h6 {
 	  color: $category-color-internacional;
 	}
   }
 
   /* Categoria FSM */
   .category-fsm {
-	a, span, h2, h3, h4, h5, h6 {
+	a, span, h3, h4, h5, h6 {
 	  color: $category-color-fsm;
 	}
   }
 
   /* Categoria Feminismo */
   .category-feminismo {
-	a, span, h2, h3, h4, h5, h6 {
+	a, span, h3, h4, h5, h6 {
 	  color: $category-color-feminismo;
 	}
   }
@@ -544,6 +544,7 @@ html {
 
 .card-columns {
   column-gap: 4rem;
+  column-count: 1;
 
   .card {
 	font-family: 'Roboto', sans-serif;
@@ -606,14 +607,18 @@ html {
 	}
   }
 
-  @media only screen and (min-width: 576px) {
-	column-count: 1;
-  }
   @media only screen and (min-width: 768px) {
 	column-count: 2;
   }
+  @media only screen and (min-width: 992px) {
+	column-count: 3;
+  }
   @media only screen and (min-width: 1200px) {
 	column-count: 3;
+  }
+
+  @media only screen and (min-width: 1320px) {
+	column-count: 4;
   }
 }
 

@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-4 order-sm-7 search-column">
 						<i class="fa fa-search"></i>
 				</div>
-				<div class="col-4 col-sm-6 offset-sm-1 offset-md-1 col-md-4 offset-lg-1 offset-xl-2">
+				<div class="col-4 col-sm-6 offset-sm-1 offset-md-1 col-md-4 offset-lg-0 offset-xl-1">
 					<a href="/">
 						<div class="logo">
 							<div class="logo-circle">
@@ -83,7 +83,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 			<div class="container-fluid">
-				<div class="offset-lg-1 offset-xl-2">
+				<div class="offset-lg-0 offset-xl-1">
 					<!-- The WordPress Menu goes here -->
 					<?php
 					wp_nav_menu(
