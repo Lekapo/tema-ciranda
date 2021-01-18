@@ -73,7 +73,6 @@ html {
 	padding: 0 1.5rem;
 	margin-top: 5rem;
 	border-bottom: 1px solid #ccc;
-	transition: all .15s ease-out;
 
 	@media only screen and (min-width: 576px) {
 	  margin-top: 3rem;
@@ -596,9 +595,9 @@ html {
 
   .card-decoration {
 
-	border-top: 7px solid lighten( $secondary, 25%  ) ;
+	border-top: 7px solid $secondary;
 
-	&:hover {
+	/*&:hover {
 	  border-top: 7px solid darken( $secondary, 5%);
 	}
 
@@ -631,9 +630,28 @@ html {
 	  &:hover {
 		border-top-color: lighten( saturate( $category-color-feminismo, 99% ), 5%);
 	  }
+	}*/
+
+	&.category-brasil {
+	  border-top-color: $category-color-brasil;
+	}
+
+	&.category-internacional {
+	  border-top-color: $category-color-internacional;
+	}
+
+	&.category-fsm {
+	  border-top-color: $category-color-fsm;
+	}
+
+	&.category-ciranda-afro {
+	  border-top-color: $category-color-ciranda-afro;
+	}
+
+	&.category-feminismo {
+	  border-top-color: $category-color-feminismo;
 	}
   }
-
   @media only screen and (min-width: 768px) {
 	column-count: 2;
   }
