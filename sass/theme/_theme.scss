@@ -49,12 +49,22 @@ html {
 	}
   }
 
+
+
+  /* Categoria Ciranda Afro */
+  .category-feminismo {
+	a, span, h3, h4, h5, h6 {
+	  color: $category-color-ciranda-afro;
+	}
+  }
+
   /* Categoria Feminismo */
   .category-feminismo {
 	a, span, h3, h4, h5, h6 {
 	  color: $category-color-feminismo;
 	}
   }
+
 
 
   .box {
