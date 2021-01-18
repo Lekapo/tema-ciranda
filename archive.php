@@ -40,11 +40,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_post();
 							?>
 							<a href="<?php the_permalink(); ?>">
-								<div class="latest-item box card decoration-category-<?php
+								<div class="latest-item box card card-decoration category-<?php
 
 								/* Banner Category Color*/
 								$categories = get_the_category();
-								echo $categories[0]->cat_ID . ' category-' . $categories[0]->cat_ID;
+								echo $categories[0]->slug;
 								?>">
 									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
 									<h4><?php echo get_the_title(); ?></h4>
