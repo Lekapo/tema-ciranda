@@ -6,85 +6,56 @@ $primary-700: #aaa;
 $secondary-300: #3a3a3a;
 $secondary: #1a1a1a;
 $secondary-500: #000;
-$category-color-1: #d42824;
-$category-color-2: #0c598d;
-$category-color-3: #f69541;
-$category-color-4: #fccf38;
+$category-color-brasil: #d42824;
+$category-color-internacional: #0c598d;
+$category-color-fsm: #f69541;
+$category-color-feminismo: #fccf38;
 $category-color-5: #ae93c6;
-$category-color-6: #1a1a1a;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html {
   font-size: 10px;
-  .decoration-category-7 {
-	border-top: 5px solid darken( $category-color-1, 10% ) ;
+
+  a {
+	color: $secondary;
 	&:hover {
-	  border-top: 5px solid lighten( saturate( $category-color-1, 99% ), 10%);
+	  color: $secondary;
 	}
   }
-  .decoration-category-4 {
-	border-top: 5px solid darken( $category-color-2, 10%  ) ;
-	&:hover {
-	  border-top: 5px solid lighten( saturate( $category-color-2, 99% ), 15%);
-	}
-  }
-  .decoration-category-3 {
-	border-top: 5px solid darken( $category-color-3, 20%  ) ;
-	&:hover {
-	  border-top: 5px solid adjust-hue( lighten( saturate( $category-color-3, 99% ), 5%), 10% );
-	}
-  }
-  .decoration-category-8 {
-	border-top: 5px solid darken( $category-color-4, 20%  ) ;
-	&:hover {
-	  border-top: 5px solid lighten( saturate( $category-color-4, 99% ), 5%);
-	}
-  }
-  .decoration-category-5 {
-	border-top: 5px solid lighten( $category-color-6, 25%  ) ;
-	&:hover {
-	  border-top: 5px solid darken( $category-color-6, 5%);
-	}
-  }
+  color: $secondary;
 
   /* Categoria Brasil */
-  .category-7 {
-	a {
-	  color: $category-color-1;
+  .category-brasil {
+	a, span, h2, h3, h4, h5, h6 {
+	  color: $category-color-brasil;
 	}
-	color: $category-color-1;
   }
 
   /* Categoria Internacional */
-  .category-4 {
-	a {
-	  color: $category-color-2;
+  .category-internacional {
+	a, span, h2, h3, h4, h5, h6 {
+	  color: $category-color-internacional;
 	}
-	color: $category-color-2;
   }
 
   /* Categoria FSM */
-  .category-3 {
-	a {
-	  color: $category-color-3;
+  .category-fsm {
+	a, span, h2, h3, h4, h5, h6 {
+	  color: $category-color-fsm;
 	}
-	color: $category-color-3;
   }
 
   /* Categoria Feminismo */
-  .category-8 {
-	a {
-	  color: $category-color-4;
+  .category-feminismo {
+	a, span, h2, h3, h4, h5, h6 {
+	  color: $category-color-feminismo;
 	}
-	color: $category-color-4;
   }
 
-  /* Categoria Colunas */
-  .category-5 {
-	a {
-	  color: $category-color-6;
-	}
-	color: $category-color-6;
-  }
 
   .box {
 	background: #f6f6f6;
@@ -310,26 +281,22 @@ html {
 	}
 
 	#menu-item-52 a {
-	  color: $category-color-1;
+	  color: $category-color-brasil;
 	}
 	#menu-item-51 a {
-	  color: $category-color-2;
+	  color: $category-color-internacional;
 
 	}
 	#menu-item-50 a {
-	  color: $category-color-3;
+	  color: $category-color-fsm;
 
 	}
 	#menu-item-53 a {
-	  color: $category-color-4;
+	  color: $category-color-feminismo;
 
 	}
 	#menu-item-12 a {
 	  color: $category-color-5;
-
-	}
-	#menu-item-13 a {
-	  color: $category-color-6;
 
 	}
   }
@@ -574,6 +541,7 @@ html {
    }
 
  }
+
 .card-columns {
   column-gap: 4rem;
 
@@ -603,6 +571,41 @@ html {
 	}
   }
 
+
+  .card-decoration {
+
+	border-top: 5px solid lighten( $secondary, 25%  ) ;
+
+	&:hover {
+	  border-top: 5px solid darken( $secondary, 5%);
+	}
+
+	&.category-brasil {
+	  border-top: 5px solid darken( $category-color-brasil, 10% ) ;
+	  &:hover {
+		border-top: 5px solid lighten( saturate( $category-color-brasil, 99% ), 10%);
+	  }
+	}
+	&.category-internacional {
+	  border-top: 5px solid darken( saturate( $category-color-internacional, 99% ), 7%  ) ;
+	  &:hover {
+		border-top: 5px solid lighten( saturate( $category-color-internacional, 99% ), 15%);
+	  }
+	}
+	&.category-fsm {
+	  border-top: 5px solid darken( $category-color-fsm, 20%  ) ;
+	  &:hover {
+		border-top: 5px solid adjust-hue( lighten( saturate( $category-color-fsm, 99% ), 5%), 10% );
+	  }
+	}
+	&.category-feminismo {
+	  border-top: 5px solid darken( $category-color-feminismo, 20%  ) ;
+	  &:hover {
+		border-top: 5px solid lighten( saturate( $category-color-feminismo, 99% ), 5%);
+	  }
+	}
+  }
+
   @media only screen and (min-width: 576px) {
 	column-count: 1;
   }
@@ -613,7 +616,6 @@ html {
 	column-count: 3;
   }
 }
-
 
 .pagination {
   justify-content: center;
