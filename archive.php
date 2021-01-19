@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
 									<p class="excerpt">
 										<?php
-										$excerpt = get_the_excerpt();
+										$excerpt = get_the_post_summary(256);
 
 										$excerpt = substr($excerpt, 0, 180);
 										echo $excerpt;
