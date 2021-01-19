@@ -12,6 +12,12 @@ $category-color-fsm: #f69541;
 $category-color-feminismo: #ae93c6;
 $category-color-ciranda-afro: #fccf38;
 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1320px;
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,6 +25,10 @@ $category-color-ciranda-afro: #fccf38;
 
 html {
   font-size: 10px;
+
+  .search-icon {
+	fill: $secondary-300;
+  }
 
   a {
 	color: $secondary;
@@ -65,7 +75,64 @@ html {
 	}
   }
 
+  .search-form {
+	 background-color: #f6f6f6;
 
+	form {
+	  @media only screen and (min-width: $sm) {
+		margin-left: 1rem;
+
+	  }
+
+	}
+
+	svg {
+	  height: 2.5rem;
+	  width: 2.5rem;
+	}
+
+	 span {
+	   display: none;
+	 }
+
+	 input {
+	   height: 6rem;
+
+	   font-family: 'Roboto', sans-serif;
+	   font-size: 2rem;
+	   font-weight: 200;
+	   text-transform: uppercase;
+	   background: $primary-500;
+	   &:focus {
+		 background-color: $primary-500;
+		 &::placeholder {
+		   color: transparent;
+		   transition: all .25s ease;
+		 }
+	   }
+	 }
+
+	@media only screen and ( min-width: $sm ) {
+	  .input-group {
+		display: flex;
+		align-items: center;
+		&:before {
+		  content: "";
+		  font-weight: 100;
+		  font-size: 2rem;
+		  position:absolute;
+		  z-index: 10;
+		}
+	  }
+	  input {
+		border: none;
+
+		&:focus {
+		  box-shadow: none;
+		}
+	  }
+	}
+   }
 
   .box {
 	background: #f6f6f6;
@@ -85,10 +152,6 @@ html {
 }
 
 .top-header {
-  @media only screen and (min-width: 576px) {
-	height: 12rem;
-	background: $primary-500;
-  }
   background: $secondary;
   height: 6rem;
 
@@ -100,12 +163,20 @@ html {
   color: $primary;
   font-size: 2.5rem;
 
-
   .search-column {
 	@media only screen and (min-width: 576px) {
 	  display: none;
 	}
 	display: block;
+  }
+
+  path {
+  }
+
+  svg {
+	height: 2.5rem;
+	width: 2.5rem;
+
   }
 
   .logo {
@@ -252,13 +323,16 @@ html {
 	}
   }
 
-  .searchIcon {
+  .search-icon-mobile {
 
 	color: white;
   }
 
 
-
+  @media only screen and (min-width: $sm) {
+	height: 12rem;
+	background: $primary-500;
+  }
 }
 
 #main-nav {
@@ -309,31 +383,7 @@ html {
 	}
   }
 
-  #searchForm {
-	background-color: #f6f6f6;
-	span {
-	  display: none;
-	}
-	input {
-	  height: 6rem;
-
-	  font-family: 'Roboto', sans-serif;
-	  font-size: 2rem;
-	  font-weight: 200;
-	  text-align: center;
-	  text-transform: uppercase;
-	  background: #f6f6f6;
-
-	  &:focus {
-		&::placeholder {
-		  color: transparent;
-		  transition: all .25s ease;
-		}
-	  }
-	}
-  }
-
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: $sm) {
 	background: $primary-500;
 	box-shadow: 0 2px 2px #00000020;
 
@@ -346,7 +396,7 @@ html {
    width: 100%;
    margin-top: 0;
 
-   @media only screen and (min-width: 576px) {
+   @media only screen and (min-width: $sm) {
 	 margin-top: 3rem;
    }
    #carousel {
@@ -359,14 +409,14 @@ html {
 		   height: 5rem;
 		   z-index: 99;
 
-		   @media only screen and (min-width: 576px) {
+		   @media only screen and (min-width: $sm) {
 			 padding: 2rem 2rem;
 			 font-size: 3.5rem;
 
 			 position: absolute;
 
 		   }
-		   @media only screen and (min-width: 996px) {
+		   @media only screen and (min-width: $lg) {
 			 padding: 3rem 3rem;
 
 		   }
@@ -391,12 +441,12 @@ html {
 		   font-size: 3.5rem;
 		   margin-bottom: 0.5rem;
 
-		   @media only screen and (min-width: 576px) {
+		   @media only screen and (min-width: $sm) {
 			 text-shadow: 2px 2px 0px rgba(0,0,0,0.7);
 			 font-size: 3.5rem;
 
 		 }
-		   @media only screen and (min-width: 996px) {
+		   @media only screen and (min-width: $lg) {
 			 font-size: 4rem;
 
 		   }
@@ -411,14 +461,14 @@ html {
 		   z-index: 0;
 		   overflow: hidden;
 
-		   @media only screen and (min-width: 576px) {
+		   @media only screen and (min-width: $sm) {
 			 height: 30rem;
 		   }
 
-		   @media only screen and (min-width: 768px) {
+		   @media only screen and (min-width: $md) {
 			 height: 35rem;
 		   }
-		   @media only screen and (min-width: 1320px) {
+		   @media only screen and (min-width: $xxl) {
 			 height: 46rem;
 		   }
 		   &:after {
@@ -429,7 +479,7 @@ html {
 			 height: 100%;
 			 width: 100%;
 
-			 @media only screen and (min-width: 576px) {
+			 @media only screen and (min-width: $sm) {
 
 			   background: linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,.2) 40%,rgba(0,0,0,.2) 80%,rgba(0,0,0,.4));
 
@@ -446,7 +496,7 @@ html {
 		   right: 0;
 		   bottom: 0;
 
-		   @media only screen and (min-width: 576px) {
+		   @media only screen and (min-width: $sm) {
 			 bottom: 20px;
 			 position: absolute;
 			 color: $primary;
@@ -457,13 +507,13 @@ html {
 			 font-size: 2.3rem;
 			 text-shadow: none;
 
-			 @media only screen and (min-width: 576px) {
+			 @media only screen and (min-width: $sm) {
 			   margin-left: 1.5rem;
 			   font-size: 3.2rem;
 			   text-shadow: 0 1px 3px rgba(0,0,0,.8);
 
 			 }
-			 @media only screen and (min-width: 996px) {
+			 @media only screen and (min-width: $lg) {
 			   margin-left: 3rem;
 
 			 }
@@ -479,7 +529,7 @@ html {
 
 	   height: 30rem;
 
-	   @media only screen and (min-width: 576px) {
+	   @media only screen and (min-width: $sm) {
 		 height: 100%;
 	   }
 
