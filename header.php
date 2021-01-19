@@ -36,9 +36,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="top-header">
 		<div class="container-fluid">
 			<div class="row align-items-center">
+
 				<div class="col-4 order-sm-7 search-column">
+					<a
+							class="searchIcon"
+							data-toggle="collapse"
+							href="#searchForm" role="button"
+							aria-expanded="false"
+							aria-controls="searchForm"
+							onload="focusMethod()"
+					>
+
+
 						<i class="fa fa-search"></i>
+					</a>
 				</div>
+
 				<div class="col-4 col-sm-6 offset-sm-1 offset-md-1 col-md-4 offset-lg-0 offset-xl-1">
 					<a href="/">
 						<div class="logo">
@@ -51,6 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</a>
 				</div>
+
 				<div class="col-4 col-md-6 justify-right d-lg-none">
 					<div class="mobile-menu-dropdown">
 						<button
@@ -99,9 +113,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 						)
 					);
 					?>
+
+
 				</div>
 			</div>
 
+
+			<div class="collapse w-100" id="searchForm">
+
+				<?php get_search_form(); ?>
+
+			</div>
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
