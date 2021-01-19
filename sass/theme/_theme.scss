@@ -513,6 +513,8 @@ html {
 	   width: 9rem;
 	   max-width: 9rem;
 
+	   align-self: center;
+
 	   @media only screen and (min-width: 1320px) {
 		 height: 12rem;
 		 width: 12rem;
@@ -526,8 +528,12 @@ html {
 	   span {
 		 font-size: 1.2rem;
 	   }
+	   p {
+		 font-weight: 400;
+		 font-size: 1.2rem;
+		 align-self: center;
+	   }
 	   h4 {
-		 min-height: 4rem;
 		 font-size: 1.7rem;
 		 color: $secondary;
 		 margin-top: .2rem;
