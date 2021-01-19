@@ -142,6 +142,7 @@ if ( is_front_page() ) {
 								<div class="spotlight-caption">
 									<span>//<?php echo strtolower($categories[0]->cat_name); ?></span>
 									<h4><?php echo get_the_title(); ?></h4>
+									<p> <?php get_the_post_summary(); ?> </p>
 									<span><?php echo get_the_author(); ?></span>
 								</div>
 							</div>
@@ -221,7 +222,7 @@ if ( is_front_page() ) {
 							<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
 							<p class="excerpt">
 								<?php
-								$excerpt = get_the_excerpt();
+								$excerpt = get_the_post_summary(256);
 
 								$excerpt = substr($excerpt, 0, 180);
 								echo $excerpt;
