@@ -136,7 +136,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<svg display="none">
 		<symbol width="24" height="24" viewBox="0 0 24 24" id="search-icon">
-		<?xml version="1.0" encoding="iso-8859-1"?>
+			<?php echo '<?xml version="1.0" encoding="utf8"?>'; ?>
 		<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 		<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			 viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve">
@@ -180,5 +180,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<g>
 			</g>
 </svg>
-
 	</svg>
