@@ -26,10 +26,6 @@ $xxl: 1320px;
 html {
   font-size: 10px;
 
-  .search-icon {
-	fill: $secondary-300;
-  }
-
   a {
 	color: $secondary;
 	&:hover {
@@ -78,17 +74,16 @@ html {
   .search-form {
 	 background-color: #f6f6f6;
 
+	.fa {
+	  font-size: 2rem;
+	  color: $secondary-300;
+	}
+
 	form {
 	  @media only screen and (min-width: $sm) {
 		margin-left: 1rem;
 
 	  }
-
-	}
-
-	svg {
-	  height: 2.5rem;
-	  width: 2.5rem;
 	}
 
 	 span {
@@ -151,6 +146,14 @@ html {
 
 
   @media only screen and (min-width: $xxl) {
+	.col-xxl-2 {
+
+	  max-width: 8.333%*2;
+	}
+	.col-xxl-3 {
+
+	  max-width: 8.333%*3;
+	}
 	.col-xxl-4 {
 
 	  max-width: 8.333%*4;

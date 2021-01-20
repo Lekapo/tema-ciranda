@@ -114,11 +114,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				</div>
-				<div class=" d-none d-sm-flex align-items-center search-form col-5 ">
+				<div class=" d-none d-sm-flex align-items-center search-form col-5 col-md-4 col-lg-3">
 
-					<svg>
-						<use xlink:href="#search-icon" />
-					</svg>
+					<i class="fa fa-search"></i>
 					<?php get_search_form(); ?>
 				</div>
 			</div>
