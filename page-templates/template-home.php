@@ -156,23 +156,6 @@ if ( is_front_page() ) {
 								/* Restore original Post Data */
 								wp_reset_postdata();
 							?>
-							<!--
-						<div class="spotlight-item category-2">
-							<img src="<?php /*echo get_template_directory_uri(); */?>/images/vereadores.jpg" alt="">
-							<div class="spotlight-caption">
-								<span>//categoria 1</span>
-								<h4>Conheça os vereadores de SP que cortaram a gratuidade em ônibus, metrô e trens para idosos</h4>
-								<span>Nome Autor</span>
-							</div>
-						</div>
-						<div class="spotlight-item category-3">
-							<img src="<?php /*echo get_template_directory_uri(); */?>/images/empregos.jpg" alt="">
-							<div class="spotlight-caption">
-								<span>//categoria 1</span>
-								<h4>Volare patienter ducunt ad raptus fluctui. Dexter, grandis nutrixs semper. </h4>
-								<span>Nome Autor</span>
-							</div>
-						</div>-->
 				</div>
 			</div>
 		</div>

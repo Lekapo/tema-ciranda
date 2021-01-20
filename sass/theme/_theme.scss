@@ -660,9 +660,12 @@ html {
 		 color: $secondary;
 		 margin-top: .2rem;
 		 margin-bottom: .6rem;
+		 font-weight: 900;
 
-		 @media only scree and ( min-width: $sm ) {
-		   font-size:
+		 @media only screen and ( min-width: $md ) {
+		   font-size: 2.1rem;
+		   line-height: 1.3;
+
 		 }
 	   }
 	 }
@@ -728,41 +731,6 @@ html {
   .card-decoration {
 
 	border-top: 7px solid $secondary;
-
-	/*&:hover {
-	  border-top: 7px solid darken( $secondary, 5%);
-	}
-
-	&.category-brasil {
-	  border-top-color: darken( $category-color-brasil, 10% ) ;
-	  &:hover {
-		border-top-color: lighten( saturate( $category-color-brasil, 99% ), 10%);
-	  }
-	}
-	&.category-internacional {
-	  border-top-color: darken( saturate( $category-color-internacional, 99% ), 7%  ) ;
-	  &:hover {
-		border-top-color: lighten( saturate( $category-color-internacional, 99% ), 15%);
-	  }
-	}
-	&.category-fsm {
-	  border-top-color: darken( $category-color-fsm, 20%  ) ;
-	  &:hover {
-		border-top-color: adjust-hue( lighten( saturate( $category-color-fsm, 99% ), 5%), 10% );
-	  }
-	}
-	&.category-ciranda-afro {
-	  border-top-color: darken( $category-color-ciranda-afro, 20%  ) ;
-	  &:hover {
-		border-top-color: lighten( saturate( $category-color-ciranda-afro, 99% ), 5%);
-	  }
-	}
-	&.category-feminismo {
-	  border-top-color: darken( $category-color-feminismo, 20%  ) ;
-	  &:hover {
-		border-top-color: lighten( saturate( $category-color-feminismo, 99% ), 5%);
-	  }
-	}*/
 
 	&.category-brasil {
 	  border-top-color: $category-color-brasil;
