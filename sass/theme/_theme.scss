@@ -149,6 +149,24 @@ html {
 	}
   }
 
+  .col-xxl-4 {
+	@media only screen and (min-width: 1320px) {
+	  max-width: 33.333%;
+	}
+  }
+  .col-xxl-6 {
+	@media only screen and (min-width: 1320px) {
+	  max-width: 49.8%;
+	}
+  }
+
+  .offset-xxl-1 {
+	@media only screen and (min-width: 1320px) {
+	  margin-left: 8.333%;
+
+	}
+  }
+
 }
 
 .top-header {

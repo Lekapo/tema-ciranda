@@ -20,7 +20,7 @@ if ( is_front_page() ) {
 
 	<div class="container-fluid">
 		<div class="row" >
-			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-7 offset-xl-1 col-xl-6">
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-7 offset-xl-0 col-xl-7 col-xxl-6 offset-xxl-1">
 				<!-- Carousel -->
 				<div id="banner">
 					<div id="carousel" class="carousel slide" data-ride="carousel">
@@ -111,7 +111,7 @@ if ( is_front_page() ) {
 			</div>
 
 
-			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-5 col-xl-4">
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-5 col-xl-5 col-xxl-4">
 				<!-- Spotlight -->
 				<div id="spotlight">
 
