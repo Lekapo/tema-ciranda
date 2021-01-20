@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-1 col-xxl-6">
+	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
 		<header class="entry-header">
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -30,11 +30,11 @@ defined( 'ABSPATH' ) || exit;
 	<div class="row">
 			<div class="entry-content">
 
-				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-1 col-xxl-6">
+				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
 					<?php the_content(); ?>
 				</div>
 
-				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-1 col-xxl-6">
+				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
 					<?php
 					wp_link_pages(
 						array(
