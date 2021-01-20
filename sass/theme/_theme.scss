@@ -149,21 +149,35 @@ html {
 	}
   }
 
-  .col-xxl-4 {
-	@media only screen and (min-width: 1320px) {
-	  max-width: 33.333%;
-	}
-  }
-  .col-xxl-6 {
-	@media only screen and (min-width: 1320px) {
-	  max-width: 49.8%;
-	}
-  }
 
-  .offset-xxl-1 {
-	@media only screen and (min-width: 1320px) {
+  @media only screen and (min-width: 1320px) {
+	.col-xxl-4 {
+
+	  max-width: 8.333%*4;
+	}
+	.col-xxl-6 {
+
+	  max-width: 8.333%*6;
+	}
+
+	.col-xxl-8 {
+
+	  max-width: 8.333%*8;
+	}
+
+	.col-xxl-10 {
+
+	  max-width: 8.333%*10;
+	}
+
+	.offset-xxl-1 {
+
 	  margin-left: 8.333%;
+	}
 
+	.offset-xxl-2 {
+
+	  margin-left: 8.333%*2;
 	}
   }
 
