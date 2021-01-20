@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<i class="fa fa-search search-icon-mobile"></i>
 				</div>
 
-				<div class="col-4 col-sm-6 offset-sm-1 offset-md-1 col-md-4 offset-lg-0 offset-xl-1">
+				<div class="col-4 col-sm-6 offset-sm-1 offset-md-1 col-md-4 offset-lg-0 offset-xl-0 offset-xxl-1">
 					<a href="/">
 						<div class="logo">
 							<div class="logo-circle">
@@ -95,7 +95,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 			<div class="container-fluid">
-				<div class="offset-lg-0 offset-xl-1">
+				<div class="offset-lg-0 offset-xl-0 offset-xxl-1">
 					<!-- The WordPress Menu goes here -->
 					<?php
 					wp_nav_menu(
@@ -114,7 +114,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				</div>
-				<div class=" d-none d-sm-flex align-items-center search-form col-5">
+				<div class=" d-none d-sm-flex align-items-center search-form col-5 ">
 
 					<svg>
 						<use xlink:href="#search-icon" />
