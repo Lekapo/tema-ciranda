@@ -150,7 +150,7 @@ html {
   }
 
 
-  @media only screen and (min-width: 1320px) {
+  @media only screen and (min-width: $xxl) {
 	.col-xxl-4 {
 
 	  max-width: 8.333%*4;
@@ -178,6 +178,11 @@ html {
 	.offset-xxl-2 {
 
 	  margin-left: 8.333%*2;
+	}
+
+	.d-xxl-block {
+
+	  display: block;
 	}
   }
 
@@ -644,12 +649,21 @@ html {
 		 font-weight: 400;
 		 font-size: 1.2rem;
 		 align-self: center;
+		 display: none;
+
+		 @media only screen and ( min-width: $xxl ) {
+		   display: block;
+		 }
 	   }
 	   h4 {
 		 font-size: 1.7rem;
 		 color: $secondary;
 		 margin-top: .2rem;
 		 margin-bottom: .6rem;
+
+		 @media only scree and ( min-width: $sm ) {
+		   font-size:
+		 }
 	   }
 	 }
    }
