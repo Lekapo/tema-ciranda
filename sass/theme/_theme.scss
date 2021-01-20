@@ -542,7 +542,7 @@ html {
 			 color: $primary;
 		   }
 		   h2 {
-			 color: #fff;
+			 color: #000;
 			 font-family: 'Roboto', sans-serif;
 			 font-weight: 900;
 			 font-size: 2.3rem;
@@ -552,6 +552,7 @@ html {
 			   margin-left: 1.5rem;
 			   font-size: 3.2rem;
 			   text-shadow: 0 1px 3px rgba(0,0,0,.8);
+			   color: #fff;
 
 			 }
 			 @media only screen and (min-width: $lg) {
@@ -634,6 +635,18 @@ html {
 		 height: 12rem;
 		 width: 12rem;
 		 max-width: 12rem;
+
+	   @media only screen and (min-width: $xl) {
+		 height: 9rem;
+		 width: 9rem;
+		 max-width: 9rem;
+	   }
+
+	   @media only screen and (min-width: $xxl) {
+		 height: 12rem;
+		 width: 12rem;
+		 max-width: 12rem;
+	   }
 
 	 }
 	 .spotlight-caption {

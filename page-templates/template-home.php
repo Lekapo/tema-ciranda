@@ -142,7 +142,6 @@ if ( is_front_page() ) {
 								<div class="spotlight-caption">
 									<span>//<?php echo strtolower($categories[0]->cat_name); ?></span>
 									<h4><?php echo get_the_title(); ?></h4>
-									<p> <?php get_the_post_summary(); ?> </p>
 									<span><?php echo get_the_author(); ?></span>
 								</div>
 							</div>
