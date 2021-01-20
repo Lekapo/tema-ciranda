@@ -86,7 +86,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar">
+	<div id="wrapper-navbar" class="sticky-top">
 
 
 
