@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						get_template_part( 'loop-templates/content', 'single' );
 
 					?>
-					<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
+					<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
 						<?php
 							// If comments are open or we have at least one comment, load up the comment template.
 							if ( comments_open() || get_comments_number() ) {

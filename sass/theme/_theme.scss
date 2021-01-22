@@ -158,6 +158,10 @@ html {
 
 	  max-width: 8.333%*4;
 	}
+	.col-xxl-5 {
+
+	  max-width: 8.333%*5;
+	}
 	.col-xxl-6 {
 
 	  max-width: 8.333%*6;
@@ -819,29 +823,44 @@ html {
 	display: flex;
 	justify-content: center;
   }
+
+  .entry-content {
+
+	width: 100%;
+	padding: 2rem;
+	text-align: justify;
+
+	p {
+	  margin-bottom: 3rem;
+	}
+  }
+
   #main {
 	width: 100%;
 	font-size: 2em;
 	line-height: 3.5rem;
 	color: $secondary;
-	h1 {
-	  color: #1a1a1a;
-	  font-size: 5rem;
-	  padding: 1.5rem 0;
+
+	.entry-header {
+	  font-family: 'Roboto', sans-serif;
+	  font-weight: 300;
+	  font-size: 1.4rem;
+	  color: $secondary;
+
+	  span {
+		color: $secondary;
+	  }
+
+	  h1 {
+		color: $secondary;
+		font-size: 5rem;
+		padding: 1.5rem 0;
+		font-weight: 900;
+	  }
 	}
+
 	img {
 	  margin-bottom: 3rem;
-	}
-
-	.entry-content {
-
-	  width: 100%;
-	  padding: 2rem;
-	  text-align: justify;
-
-	  p {
-		margin-bottom: 3rem;
-	  }
 	}
   }
 }

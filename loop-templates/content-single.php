@@ -11,17 +11,20 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
+	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-2 col-xxl-5">
 		<header class="entry-header">
+
+
+			<div class="entry-date">
+
+
+				<?php echo get_the_date() . ' - ' . get_the_time(); ?>
+
+			</div>
 
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-			<div class="entry-meta">
-
-				<div class="date"><?php the_date(); ?></div>
-				<div class="author"><?php the_author(); ?></div>
-
-			</div><!-- .entry-meta -->
+			<div class="entry-author"><span>Por </span><?php echo get_the_author(); ?></div>
 
 		</header><!-- .entry-header -->
 		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
@@ -31,11 +34,11 @@ defined( 'ABSPATH' ) || exit;
 	<div class="row">
 			<div class="entry-content">
 
-				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
+				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
 					<?php the_content(); ?>
 				</div>
 
-				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-8 offset-xxl-1 col-xxl-6">
+				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
 					<?php
 					wp_link_pages(
 						array(
@@ -49,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 			</div><!-- .entry-content -->
 		</div>
 
-	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-1 col-xxl-6">
+	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
 		<footer class="entry-footer">
 
 			<?php understrap_entry_footer(); ?>
