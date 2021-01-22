@@ -402,24 +402,34 @@ html {
 	  }
 	}
 
-	#menu-item-52 a {
-	  color: $category-color-brasil;
-	}
-	#menu-item-51 a {
-	  color: $category-color-internacional;
+	.menu-item {
+	  &.category-brasil a {
+		color: $category-color-brasil;
+	  }
 
-	}
-	#menu-item-50 a {
-	  color: $category-color-fsm;
+	  &.category-internacional a {
+		color: $category-color-internacional;
+	  }
 
-	}
-	#menu-item-53 a {
-	  color: $category-color-feminismo;
+	  &.category-fsm a {
+		color: $category-color-fsm;
 
-	}
-	#menu-item-12 a {
-	  color: $secondary;
+	  }
 
+	  &.category-feminismo a {
+		color: $category-color-feminismo;
+
+	  }
+
+	  &.category-ciranda-afro a {
+		color: $category-color-ciranda-afro;
+
+	  }
+
+	  &.category-colunas a {
+		color: $secondary
+
+	  }
 	}
   }
 
