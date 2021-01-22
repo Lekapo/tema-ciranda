@@ -384,20 +384,29 @@ html {
 
   #main-menu {
 	li {
+	  padding-right: 30px;
+
+	  &.active {
+		a {
+		  border-bottom: 2px solid;
+		}
+		:before {
+		  content: '// ';
+
+		}
+	  }
 	  a {
 		text-decoration: none;
 		font-family: 'Patua One', cursive;
 	  	font-size: 1.8rem;
 		color: $primary-700;
 
-		padding-right: 30px;
-
-		transition: all .15s ease-out;
-
 		&:hover {
-		  transform: scale(1.2);
-		  transition: transform .15s ease-in;
-		  filter: saturate(400%);
+		  border-bottom: 2px solid;
+		  &:before {
+			content: '// ';
+
+		  }
 		}
 	  }
 	}

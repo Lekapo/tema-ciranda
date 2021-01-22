@@ -18,7 +18,8 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="entry-meta">
 
-				<?php understrap_posted_on(); ?>
+				<div class="date"><?php the_date(); ?></div>
+				<div class="author"><?php the_author(); ?></div>
 
 			</div><!-- .entry-meta -->
 
