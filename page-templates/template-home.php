@@ -172,6 +172,7 @@ if ( is_front_page() ) {
 						$args = array(
 								'orderby' => 'date',
 								'order' => 'DESC',
+								'offset' => 6,
 								'posts_per_page' => 8,
 								'paged'=>$paged,
 
