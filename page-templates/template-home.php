@@ -179,7 +179,7 @@ if ( is_front_page() ) {
 						$args = array(
 								'orderby' 		 => 'date',
 								'order' 		 => 'DESC',
-								'posts_per_page' => 1,
+								'posts_per_page' => 8,
 								'paged' 		 => $paged,
 								'offset_start'	 => 6,         // custom field
 
