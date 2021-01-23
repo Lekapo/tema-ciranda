@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							?>
 				</main><!-- #main -->
 			</div>
-		</div>
+
 			<?php
 			// Display the pagination component.
 			understrap_pagination();

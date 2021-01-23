@@ -19,55 +19,73 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row">
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-1 col-xxl-10">
+				<main class="site-main" id="main">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
-			<main class="site-main" id="main">
-
-				<?php if ( have_posts() ) : ?>
-
+					<?php
+					if ( have_posts() ) :
+					?>
 					<header class="page-header">
+						<?php
+							echo '<h1>';
+							printf(
 
-							<h1 class="page-title">
-								<?php
-								printf(
-									/* translators: %s: query term */
-									esc_html__( 'Search Results for: %s', 'understrap' ),
-									'<span>' . get_search_query() . '</span>'
-								);
-								?>
-							</h1>
-
+								/* translators: %s: query term */
+								esc_html__( 'Resultados da pesquisa por: %s', 'understrap' ),
+								'<span>' . get_search_query() . '</span>'
+							);
+							echo '</h1>';
+						?>
 					</header><!-- .page-header -->
 
-					<?php /* Start the Loop */ ?>
-					<?php
-					while ( have_posts() ) :
-						the_post();
+					<div class="card-columns">
+						<?php
+						// Start the loop.
+						$index = 0;
+						while ( have_posts() ) :
+							the_post();
+							?>
+							<a href="<?php the_permalink(); ?>">
+								<div class="latest-item box card card-decoration category-<?php
 
-						/*
-						 * Run the loop for the search to output the results.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-search.php and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', 'search' );
-					endwhile;
-					?>
+								/* Banner Category Color*/
+								$categories = get_the_category();
+								echo $categories[0]->slug;
+								?>">
+									<img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="latest-image">
+									<h2><?php echo get_the_title(); ?></h2>
+									<span class="author"><em>Por</em> <?php echo get_the_author(); ?></span>
+									<p class="excerpt">
+										<?php
+										$excerpt = get_the_post_summary(256);
 
-				<?php else : ?>
+										$excerpt = substr($excerpt, 0, 180);
+										echo $excerpt;
+										?>
+									</p>
+								</div>
+							</a>
+							<?php
 
-					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+							$index++;
 
-				<?php endif; ?>
+						endwhile;
 
-			</main><!-- #main -->
+						wp_reset_postdata();
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+						else :
+							echo "<h1>Nenhum resultado foi encontrado para: " .
+									'<span>' . get_search_query() . '</span>' .
+								"</h1>";
+						endif;
+						?>
+				</main><!-- #main -->
+			</div>
 
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+			<?php
+			// Display the pagination component.
+			understrap_pagination();
+			?>
 
 		</div><!-- .row -->
 
