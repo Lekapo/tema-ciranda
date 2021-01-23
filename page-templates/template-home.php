@@ -168,13 +168,20 @@ if ( is_front_page() ) {
 					<h3>//todas</h3>
 					<div class="card-columns">
 					<?php
+
+						/*
+							Created a custom field that work with php functions on ciranda.php
+							to solve the problem that setting offsets breaks pagination.
+
+						*/
+
 						$paged = (get_query_var("page")) ? get_query_var("page") : 1;
 						$args = array(
-								'orderby' => 'date',
-								'order' => 'DESC',
-								'offset' => 6,
-								'posts_per_page' => 8,
-								'paged'=>$paged,
+								'orderby' 		 => 'date',
+								'order' 		 => 'DESC',
+								'posts_per_page' => 1,
+								'paged' 		 => $paged,
+								'offset_start'	 => 6,         // custom field
 
 						);
 						$index = 0;
@@ -218,8 +225,6 @@ if ( is_front_page() ) {
 
 							endwhile;
 
-							wp_reset_postdata();
-
 							else :
 								// no posts found
 							endif;
@@ -232,7 +237,7 @@ if ( is_front_page() ) {
 						understrap_pagination(array(
 								'mid_size'  => 2,
 								'add_fragment' => '#latest',
-								));
+						));
 
 						// Restore original query object
 						$wp_query = null;

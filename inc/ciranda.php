@@ -29,3 +29,59 @@ function ciranda_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_script', 'ciranda_enqueue_scripts' );
 
+
+add_action( 'pre_get_posts', 'myprefix_query_offset', 1 );
+function myprefix_query_offset(&$query) {
+
+	//Before anything else, make sure this is the right query...
+	if( ! $query->is_home() ) {
+		return;
+	}
+
+	//if query hasn't offset option defined do nothing...
+	if( ! isset( $query->query_vars['offset_start']  ) ) {
+		return;
+	}
+
+	//First, define your desired offset...
+	$offset = $query->query_vars['offset_start'];
+
+	//Next, determine how many posts per page you want (we'll use WordPress's settings)
+	$ppp = $query->query_vars['posts_per_page'];
+
+	//Next, detect and handle pagination...
+	if ( $query->is_paged ) {
+
+		//Manually determine page query offset (offset + current page (minus one) x posts per page)
+		$page_offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
+
+		//Apply adjust page offset
+		$query->set('offset', $page_offset );
+
+	}
+	else {
+
+		//This is the first page. Just use the offset...
+		$query->set( 'offset',$offset );
+
+	}
+}
+
+add_filter( 'found_posts', 'myprefix_adjust_offset_pagination', 1, 2 );
+function myprefix_adjust_offset_pagination( $found_posts, $query ) {
+
+	//if query hasn't offset option defined do nothing...
+	if( ! isset( $query->query_vars['offset_start']  ) ) {
+		return;
+	}
+
+	//Define our offset again...
+	$offset = $query->query_vars['offset_start'];
+
+	//Ensure we're modifying the right query object...
+	if ( $query->is_home() ) {
+		//Reduce WordPress's found_posts count by the offset...
+		return $found_posts - $offset;
+	}
+	return $found_posts;
+}

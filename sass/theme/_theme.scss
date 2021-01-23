@@ -11,6 +11,7 @@ $category-color-internacional: #0c598d;
 $category-color-fsm: #f69541;
 $category-color-feminismo: #ae93c6;
 $category-color-ciranda-afro: #fccf38;
+$ciranda-color: #e55938;
 
 $sm: 576px;
 $md: 768px;
@@ -810,12 +811,31 @@ html {
   font-size: 3rem;
   color: $secondary;
   font-family: 'Patua One', cursive;
+
   a {
 	color: $secondary
+
   }
-  .page-numbers {
-	padding: 0 1.5rem;
+
+  .page-item {
+	span, a {
+	  background-color: $primary-500;
+	  padding: 0 1.5rem;
+	}
+
+	a:hover {
+	  background-color: $ciranda-color;
+	  color: $primary;
+	}
+
+	&.active {
+	  span {
+		background-color: $ciranda-color;
+
+	  }
+	}
   }
+
 }
 
 #single-wrapper {
