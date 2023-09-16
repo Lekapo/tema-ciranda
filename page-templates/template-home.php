@@ -181,7 +181,7 @@ if ( is_front_page() ) {
 								'order' 		 => 'DESC',
 								'posts_per_page' => 8,
 								'paged' 		 => $paged,
-								'offset_start'	 => 6,         // custom field
+								'offset_start'	 => 4,         // custom field
 
 						);
 						$index = 0;
