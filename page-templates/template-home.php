@@ -27,7 +27,7 @@ if ( is_front_page() ) {
 						<div class="carousel-inner">
 						<?php
 						$args = array(
-								'posts_per_page' => 3,
+								'posts_per_page' => 1,
 						);
 						$index = 0;
 						// The Query
@@ -98,14 +98,14 @@ if ( is_front_page() ) {
 						</div>
 
 						<!-- Carousel Controls -->
-						<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+						<!-- <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						</a>
 						<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
 							<span class="carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
-						</a>
+						</a> -->
 					</div>
 				</div>
 			</div>
@@ -118,7 +118,7 @@ if ( is_front_page() ) {
 					<?php
 						$args = array(
 								'posts_per_page' => 3,
-								'offset' => 3,
+								'offset' => 1,
 
 						);
 						$index = 0;
