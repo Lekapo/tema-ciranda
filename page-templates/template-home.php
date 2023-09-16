@@ -165,7 +165,7 @@ if ( is_front_page() ) {
 
 				<!-- Latest -->
 				<div id="latest">
-					<h3>//todass</h3>
+					<h3>//todas</h3>
 					<div class="card-columns">
 					<?php
 
@@ -181,7 +181,7 @@ if ( is_front_page() ) {
 								'order' 		 => 'DESC',
 								'posts_per_page' => 8,
 								'paged' 		 => $paged,
-								'offset_start'	 => 4,         // custom field
+								'offset_start'	 => 6,         // custom field
 
 						);
 						$index = 0;

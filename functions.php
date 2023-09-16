@@ -60,3 +60,13 @@ add_filter( 'get_the_archive_title', function ($title) {
 	}
 	return $title;
 });
+
+// pre get posts is necessary for archive.php pagination, without pages past 3 wont load
+function tweak_posts_per_page( $query ) {
+    if( !is_admin() && !$query->is_home() ) :
+        $query->set( 'posts_per_page', 8 );
+        return;
+    endif;
+}
+
+add_action('pre_get_posts', 'tweak_posts_per_page');
