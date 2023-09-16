@@ -165,7 +165,7 @@ if ( is_front_page() ) {
 
 				<!-- Latest -->
 				<div id="latest">
-					<h3>//todas</h3>
+					<h3>//todass</h3>
 					<div class="card-columns">
 					<?php
 

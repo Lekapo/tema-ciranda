@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-2 col-xxl-5">
+	<div class="m-auto col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-10 offset-xxl-2 col-xxl-5">
 		<header class="entry-header">
 
 
@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="row">
 			<div class="entry-content">
 
-				<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
+				<div class="m-auto col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
 					<?php the_content(); ?>
 				</div>
 
@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 			</div><!-- .entry-content -->
 		</div>
 
-	<div class="col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
+	<div class="m-auto col-12 offset-sm-1 col-sm-10 offset-lg-1 col-lg-10 offset-xl-1 col-xl-7 offset-xxl-2 col-xxl-5">
 		<footer class="entry-footer">
 
 			<?php understrap_entry_footer(); ?>
