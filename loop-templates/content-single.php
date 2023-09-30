@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 			<div class="entry-author">
-				<span>Por </span><a href="/author/<?php echo get_the_author(); ?>"><?php echo get_the_author(); ?></a>
+			<span>Por </span><a href="/author/<?php echo get_the_author_meta('user_nicename'); ?>"><?php echo get_the_author(); ?></a>
 			</div>
 
 		</header><!-- .entry-header -->
