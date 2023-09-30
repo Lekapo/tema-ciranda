@@ -22,8 +22,14 @@ $container = get_theme_mod( 'understrap_container_fluid' );
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-12 offset-xl-1 col-xl-10">
 
 				<!-- Latest -->
-				<div id="latest">
-					<h3>//todas</h3>
+				<div id="category">
+					<header class="page-header">
+						<?php
+						the_archive_title( '<h1 class="page-title">//', '</h1>' );
+						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						?>
+					</header><!-- .page-header -->
+
 					<div class="card-columns">
 					<?php
 
@@ -35,6 +41,7 @@ $container = get_theme_mod( 'understrap_container_fluid' );
 
 						$paged = (get_query_var("paged")) ? get_query_var("paged") : 1;
 						$args = array(
+								'cat'		 	 => get_query_var('cat'),
 								'orderby' 		 => 'date',
 								'order' 		 => 'DESC',
 								'posts_per_page' => 8,
