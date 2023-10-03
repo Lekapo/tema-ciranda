@@ -42,6 +42,8 @@ $container = get_theme_mod( 'understrap_container_fluid' );
                         $term_id = $term->term_id;
 						$paged = (get_query_var("paged")) ? get_query_var("paged") : 1;
 						$args = array(
+                            
+                            'paged' 		 => $paged,
                             'post_type'      => array('post', 'page'),
                             'posts_per_page' => -1,
                             'post_status'    => 'publish',
