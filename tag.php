@@ -45,8 +45,11 @@ $container = get_theme_mod( 'understrap_container_fluid' );
                             
                             'paged' 		 => $paged,
                             'post_type'      => array('post', 'page'),
-                            'posts_per_page' => -1,
+                            'posts_per_page' => 8,
+                            'orderby' 		 => 'date',
+                            'order' 		 => 'DESC',
                             'post_status'    => 'publish',
+                            'offset_start'	 => 0,         // custom field
                             'tax_query'      => array(
                                array(
                                  'taxonomy'    => 'post_tag',
