@@ -159,6 +159,14 @@ if ( is_front_page() ) {
 			</div>
 		</div>
 
+		<div class="row">
+
+			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-12 offset-xl-1 col-xl-10">
+				<h3>//videos</h3>
+			</div>
+			
+		</div>
+
 
 		<div class="row">
 			<div class="col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-12 offset-xl-1 col-xl-10">
